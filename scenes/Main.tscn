@@ -1,0 +1,1390 @@
+[gd_scene load_steps=75 format=3 uid="uid://2r2xorepwlip"]
+
+[ext_resource type="ArrayMesh" uid="uid://ciyuvidf7s8lh" path="res://assets/Gym general/terrain/Terrain001_1K.obj" id="1_01uq1"]
+[ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/Environment/world_environment.tscn" id="1_6j5mm"]
+[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
+[ext_resource type="Material" uid="uid://dnplp0inlcgg3" path="res://assets/Materials/terrain.tres" id="2_skptw"]
+[ext_resource type="PackedScene" uid="uid://bx1i634h2xb1d" path="res://scenes/Environment/ground.tscn" id="2_yuwpt"]
+[ext_resource type="PackedScene" uid="uid://bn5uphvn0cu38" path="res://scenes/Environment/wall.tscn" id="3_ot1kd"]
+[ext_resource type="Texture2D" uid="uid://j7xny4awx6ju" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Color.jpg" id="5_5pxup"]
+[ext_resource type="PackedScene" uid="uid://8i8upkiygdeo" path="res://assets/Gym general/glass_window/scene.gltf" id="5_cc8ki"]
+[ext_resource type="PackedScene" uid="uid://xlqmwb43hp4v" path="res://scenes/Environment/ceiling.tscn" id="5_vdm7y"]
+[ext_resource type="PackedScene" uid="uid://br4ok3f26bq3s" path="res://assets/Gym general/door_with_frame/scene.gltf" id="6_1lp3k"]
+[ext_resource type="PackedScene" uid="uid://c07rrao6iy5nq" path="res://assets/Equipment/FBX/Treadmill_1_Main.fbx" id="6_2xra4"]
+[ext_resource type="Texture2D" uid="uid://bsjpbxfokteth" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Roughness.jpg" id="6_8enqf"]
+[ext_resource type="Texture2D" uid="uid://qpivytj80c3k" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Displacement.jpg" id="6_chwiy"]
+[ext_resource type="PackedScene" uid="uid://dncrcyoh3dyx0" path="res://scenes/player/ui.tscn" id="6_dy26r"]
+[ext_resource type="Texture2D" uid="uid://dyptuxero30i1" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_NormalDX.jpg" id="6_i7okf"]
+[ext_resource type="PackedScene" uid="uid://coyxfgyuon2hb" path="res://assets/Equipment/FBX/Exercise_Bike.fbx" id="7_gwpx8"]
+[ext_resource type="PackedScene" uid="uid://bhggcevqodvoc" path="res://assets/Equipment/FBX/Exercise_Bike_Seat.fbx" id="8_2wns8"]
+[ext_resource type="PackedScene" uid="uid://buq7ij5osxvoq" path="res://assets/Equipment/FBX/Sp_Mat_1.fbx" id="8_4iok1"]
+[ext_resource type="PackedScene" uid="uid://bufbfmdvif1o" path="res://assets/Equipment/FBX/Desk_1.fbx" id="8_5f4sk"]
+[ext_resource type="PackedScene" uid="uid://b1ej5pmdps6k3" path="res://assets/Equipment/FBX/Sp_Mat_2.fbx" id="9_5ax74"]
+[ext_resource type="PackedScene" uid="uid://b3piudacf3y2t" path="res://assets/Equipment/FBX/Keyboard.fbx" id="9_aw1sg"]
+[ext_resource type="PackedScene" uid="uid://bg7od2e87itq3" path="res://assets/Equipment/FBX/Exercise_Bike_Pedal_A.fbx" id="9_wd73p"]
+[ext_resource type="PackedScene" uid="uid://dcw03n5teex6f" path="res://assets/Equipment/FBX/Mouse.fbx" id="10_e556c"]
+[ext_resource type="PackedScene" uid="uid://ch3dllx43rdfm" path="res://assets/Equipment/FBX/Kettlebell.fbx" id="10_l3xu0"]
+[ext_resource type="PackedScene" uid="uid://cyla8iscrrpjv" path="res://assets/Equipment/FBX/Exercise_Bike_Pedal_B.fbx" id="10_ycqak"]
+[ext_resource type="PackedScene" uid="uid://dn746pss0nbwq" path="res://assets/Equipment/FBX/Weight_Stand_1.fbx" id="11_3g3mp"]
+[ext_resource type="PackedScene" uid="uid://ceh5glgqwxpje" path="res://assets/Equipment/FBX/PC_Screen.fbx" id="11_ehpxe"]
+[ext_resource type="PackedScene" uid="uid://dyrylqg5qu8jj" path="res://assets/Equipment/FBX/Barbell_Stand_1.fbx" id="12_6no6e"]
+[ext_resource type="PackedScene" uid="uid://b6sbpsqjlgnup" path="res://assets/Equipment/FBX/Weight_A.fbx" id="12_un7og"]
+[ext_resource type="PackedScene" uid="uid://bap1go14tjxpa" path="res://assets/Equipment/FBX/Plant_Deco.fbx" id="12_ye7yc"]
+[ext_resource type="PackedScene" uid="uid://b6412ycj50oct" path="res://assets/Equipment/FBX/Weight_B.fbx" id="13_3a3nu"]
+[ext_resource type="PackedScene" uid="uid://bg16xr4tytcjw" path="res://assets/Equipment/FBX/Sofa_2.fbx" id="13_dr0tc"]
+[ext_resource type="PackedScene" uid="uid://ba0px2nfclgur" path="res://assets/Equipment/FBX/Sofa_1.fbx" id="14_l0en8"]
+[ext_resource type="PackedScene" uid="uid://d2f1lx8fpadu1" path="res://assets/Equipment/FBX/Dumbbells_1.fbx" id="14_w8p8t"]
+[ext_resource type="PackedScene" uid="uid://2pkurkg43nqf" path="res://assets/Equipment/FBX/CTable_3.fbx" id="15_1a0em"]
+[ext_resource type="PackedScene" uid="uid://c24m6wdkn808i" path="res://assets/Equipment/FBX/Sofa_3.fbx" id="15_5h2g8"]
+[ext_resource type="PackedScene" uid="uid://c84m5hm86ipb3" path="res://assets/Equipment/FBX/Dumbbells_2.fbx" id="15_h36mb"]
+[ext_resource type="PackedScene" uid="uid://jh0nkeb267xe" path="res://assets/Equipment/FBX/CTable_3_Glass.fbx" id="16_ol7oc"]
+[ext_resource type="PackedScene" uid="uid://dsnbevgpirx6k" path="res://assets/Equipment/FBX/Mounted_TV.fbx" id="17_3x5vg"]
+[ext_resource type="PackedScene" uid="uid://blwkk50v13oll" path="res://assets/Equipment/FBX/Barbell_1.fbx" id="17_bx0xf"]
+[ext_resource type="PackedScene" uid="uid://cfbaqwmt4a2c6" path="res://assets/Equipment/FBX/Painting.fbx" id="18_25ouv"]
+[ext_resource type="PackedScene" uid="uid://b1h6g0l0xbeya" path="res://assets/Equipment/FBX/EzBar.fbx" id="18_k123i"]
+[ext_resource type="PackedScene" uid="uid://d1s1qfqa2c68c" path="res://assets/Equipment/FBX/Bench_A.fbx" id="19_hmnq7"]
+[ext_resource type="PackedScene" uid="uid://c4jt3gvwgnqo2" path="res://assets/Equipment/FBX/Bench_B.fbx" id="20_d1cco"]
+[ext_resource type="PackedScene" uid="uid://upgab53om5fr" path="res://assets/Equipment/FBX/E_Machine_1.fbx" id="21_hdhfh"]
+[ext_resource type="PackedScene" uid="uid://locy5c8r6w0c" path="res://assets/Equipment/FBX/E_Machine_Ac_1.fbx" id="22_aqq58"]
+[ext_resource type="PackedScene" uid="uid://dr7keq61ned0t" path="res://assets/Equipment/FBX/E_Machine_3.fbx" id="23_fn588"]
+[ext_resource type="PackedScene" uid="uid://cp2a5e0rk0pdh" path="res://assets/Equipment/FBX/Weight_D.fbx" id="23_qlyw6"]
+[ext_resource type="PackedScene" uid="uid://bkum7fuw6gtq6" path="res://assets/Equipment/FBX/Bench_C.fbx" id="24_xxmrs"]
+[ext_resource type="PackedScene" uid="uid://c3q58vl7l5ro7" path="res://assets/Equipment/FBX/Bench_D.fbx" id="25_0h2n2"]
+[ext_resource type="PackedScene" uid="uid://dgjnpx450bh3f" path="res://assets/Equipment/FBX/PullDown_Ac_1.fbx" id="25_l2kl7"]
+[ext_resource type="PackedScene" uid="uid://iqspq6i0xke6" path="res://assets/Equipment/FBX/E_Machine_4.fbx" id="26_uosw2"]
+[ext_resource type="PackedScene" uid="uid://e00k2d6qi5co" path="res://assets/Equipment/FBX/PullDown_Ac_2.fbx" id="27_1dpj2"]
+[ext_resource type="PackedScene" uid="uid://bx47gihrd1y61" path="res://assets/Equipment/FBX/E_Machine_5.fbx" id="27_igtvv"]
+[ext_resource type="PackedScene" uid="uid://cpyqmr0edvnv5" path="res://assets/Equipment/FBX/Weight_Bar_C.fbx" id="32_kshw5"]
+[ext_resource type="PackedScene" uid="uid://bm3h750vv31d5" path="res://assets/Equipment/FBX/Sm_Machine.fbx" id="32_l8m0q"]
+[ext_resource type="PackedScene" uid="uid://o3afig4lxum3" path="res://assets/Equipment/FBX/Pec_Machine_Ac_1.fbx" id="32_ln001"]
+[ext_resource type="PackedScene" uid="uid://r662glfkjqc6" path="res://assets/Equipment/FBX/PecDeck_Ac_2.fbx" id="33_856s6"]
+[ext_resource type="PackedScene" uid="uid://026hxc0dwhpe" path="res://assets/Equipment/FBX/Bench_Press.fbx" id="38_ykskq"]
+[ext_resource type="VoxelGIData" uid="uid://c0og1do46v6rn" path="res://scenes/Main.VoxelGI_data.res" id="59_fjeaq"]
+[ext_resource type="PackedScene" uid="uid://b2iw5wxbl43s7" path="res://assets/Gym general/whiteboard/scene.gltf" id="60_6j5i8"]
+[ext_resource type="PackedScene" uid="uid://dvv0sif06rdg1" path="res://assets/Gym general/niceday_whiteboard_marker/scene.gltf" id="61_knqf7"]
+[ext_resource type="FontFile" uid="uid://xllmi46s1prp" path="res://assets/Fonts/Itim-Regular.ttf" id="62_nddp4"]
+[ext_resource type="Texture2D" uid="uid://bsimqncoiru7p" path="res://assets/Textures/board/wasd.png" id="63_87bjg"]
+[ext_resource type="Texture2D" uid="uid://cs7jd1u364irf" path="res://assets/Textures/board/ekey.png" id="64_ciqqb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dedhp"]
+albedo_texture = ExtResource("5_5pxup")
+roughness_texture = ExtResource("6_8enqf")
+normal_enabled = true
+normal_texture = ExtResource("6_i7okf")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("6_chwiy")
+uv1_scale = Vector3(1, 5, 1)
+uv2_scale = Vector3(5, 5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtx1y"]
+albedo_texture = ExtResource("5_5pxup")
+roughness_texture = ExtResource("6_8enqf")
+normal_enabled = true
+normal_texture = ExtResource("6_i7okf")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("6_chwiy")
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_itw77"]
+size = Vector3(3, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dmj77"]
+size = Vector3(11, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_880cq"]
+size = Vector3(10, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_waiyh"]
+size = Vector3(8, 1, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8t6x8"]
+size = Vector3(7, 1, 7.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a4bcy"]
+size = Vector3(10, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iivlo"]
+size = Vector3(3, 1, 8)
+
+[node name="World" type="Node3D"]
+
+[node name="SecondaryLighting" type="VoxelGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+visible = false
+size = Vector3(30, 8, 30)
+data = ExtResource("59_fjeaq")
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -138.2, 1579.1)
+cast_shadow = 0
+gi_mode = 0
+mesh = ExtResource("1_01uq1")
+surface_material_override/0 = ExtResource("2_skptw")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_6j5mm")]
+
+[node name="Player" parent="." instance=ExtResource("1_g2tc4")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -11.9911, 0, -5.63436)
+
+[node name="UI" parent="Player" instance=ExtResource("6_dy26r")]
+
+[node name="Gym" type="Node3D" parent="."]
+
+[node name="Walls" type="Node3D" parent="Gym"]
+
+[node name="ground" parent="Gym/Walls" instance=ExtResource("2_yuwpt")]
+
+[node name="wall" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5091, 2.98891, 0)
+
+[node name="wall2" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4689, 2.98228, 0)
+
+[node name="wall3" type="CSGCombiner3D" parent="Gym/Walls"]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0, 3, 9.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Gym/Walls/wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2.98023e-07)
+size = Vector3(1, 5, 30)
+material = SubResource("StandardMaterial3D_dedhp")
+
+[node name="window" parent="Gym/Walls/wall3/CSGBox3D" instance=ExtResource("5_cc8ki")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -6.48127, -1.2, -8.99999)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Gym/Walls/wall3"]
+transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, -0.150004)
+operation = 2
+size = Vector3(1, 2.1, 6.8)
+material = SubResource("StandardMaterial3D_wtx1y")
+
+[node name="window2" parent="Gym/Walls/wall3/CSGBox3D2" instance=ExtResource("5_cc8ki")]
+transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6.48127, -1.2, 0.150004)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Gym/Walls/wall3"]
+transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, 8.75)
+operation = 2
+size = Vector3(1, 2.1, 6.8)
+material = SubResource("StandardMaterial3D_wtx1y")
+
+[node name="window3" parent="Gym/Walls/wall3/CSGBox3D4" instance=ExtResource("5_cc8ki")]
+transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6.48127, -1.2, 0.150007)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Gym/Walls/wall3"]
+transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, -9.15)
+operation = 2
+size = Vector3(1, 2.1, 6.8)
+material = SubResource("StandardMaterial3D_wtx1y")
+
+[node name="usedascollider" parent="Gym/Walls/wall3" instance=ExtResource("3_ot1kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2.98023e-07)
+visible = false
+
+[node name="wall4" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0, 3, -14.5)
+
+[node name="ceiling" parent="Gym/Walls" instance=ExtResource("5_vdm7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.85986, 0)
+
+[node name="door" parent="Gym/Walls" instance=ExtResource("6_1lp3k")]
+transform = Transform3D(0.013, 0, 0, 0, 0.013, 0, 0, 0, 0.013, 0.5, 0.513878, -14.1)
+
+[node name="DoorArea" type="Area3D" parent="Gym/Walls/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.11388, -13.4)
+top_level = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Walls/door/DoorArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+shape = SubResource("BoxShape3D_itw77")
+
+[node name="Lights" type="Node3D" parent="Gym"]
+
+[node name="light" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 5, 9)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light2" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 5, 3)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light3" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 5, -3)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light4" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 5, -9)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light5" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 5, 9)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light6" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 5, 3)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light7" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 5, -3)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="light8" type="OmniLight3D" parent="Gym/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 5, -9)
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="Equipment" type="Node3D" parent="Gym"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="Treadmills" type="Node3D" parent="Gym/Equipment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0833333, 0)
+
+[node name="Treadmill_1_Main" parent="Gym/Equipment/Treadmills" instance=ExtResource("6_2xra4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, 0.5, 9.3)
+
+[node name="Treadmill_1_Main2" parent="Gym/Equipment/Treadmills" instance=ExtResource("6_2xra4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25, 0.5, 9.3)
+
+[node name="Treadmill_1_Main3" parent="Gym/Equipment/Treadmills" instance=ExtResource("6_2xra4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 0.5, 9.3)
+
+[node name="Treadmill_1_Main4" parent="Gym/Equipment/Treadmills" instance=ExtResource("6_2xra4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0.5, 9.3)
+
+[node name="Treadmill_1_Main5" parent="Gym/Equipment/Treadmills" instance=ExtResource("6_2xra4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0.5, 9.3)
+
+[node name="Treadmill_1_Main6" parent="Gym/Equipment/Treadmills" instance=ExtResource("6_2xra4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.5, 9.3)
+
+[node name="TreadmillArea" type="Area3D" parent="Gym/Equipment/Treadmills"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 1.66667, 9.41667)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/Treadmills/TreadmillArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16667, -0.5, 0)
+shape = SubResource("BoxShape3D_dmj77")
+
+[node name="Bikes" type="Node3D" parent="Gym/Equipment"]
+
+[node name="Exercise_Bike" parent="Gym/Equipment/Bikes" instance=ExtResource("7_gwpx8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -9.91666, 0.5, 9.28333)
+
+[node name="Exercise_Bike_Seat" parent="Gym/Equipment/Bikes/Exercise_Bike" instance=ExtResource("8_2wns8")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, -0.150544, -0.0144196)
+
+[node name="Exercise_Bike_Pedal_A" parent="Gym/Equipment/Bikes/Exercise_Bike" instance=ExtResource("9_wd73p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike/Exercise_Bike_Pedal_A" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike_Pedal_A2" parent="Gym/Equipment/Bikes/Exercise_Bike" instance=ExtResource("9_wd73p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8147e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike/Exercise_Bike_Pedal_A2" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike2" parent="Gym/Equipment/Bikes" instance=ExtResource("7_gwpx8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -8.25, 0.5, 9.28333)
+
+[node name="Exercise_Bike_Seat" parent="Gym/Equipment/Bikes/Exercise_Bike2" instance=ExtResource("8_2wns8")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, -0.150544, -0.0144196)
+
+[node name="Exercise_Bike_Pedal_A" parent="Gym/Equipment/Bikes/Exercise_Bike2" instance=ExtResource("9_wd73p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike2/Exercise_Bike_Pedal_A" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike_Pedal_A2" parent="Gym/Equipment/Bikes/Exercise_Bike2" instance=ExtResource("9_wd73p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8147e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike2/Exercise_Bike_Pedal_A2" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike3" parent="Gym/Equipment/Bikes" instance=ExtResource("7_gwpx8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.58333, 0.5, 9.28333)
+
+[node name="Exercise_Bike_Seat" parent="Gym/Equipment/Bikes/Exercise_Bike3" instance=ExtResource("8_2wns8")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, -0.150544, -0.0144196)
+
+[node name="Exercise_Bike_Pedal_A" parent="Gym/Equipment/Bikes/Exercise_Bike3" instance=ExtResource("9_wd73p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike3/Exercise_Bike_Pedal_A" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike_Pedal_A2" parent="Gym/Equipment/Bikes/Exercise_Bike3" instance=ExtResource("9_wd73p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8147e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike3/Exercise_Bike_Pedal_A2" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike4" parent="Gym/Equipment/Bikes" instance=ExtResource("7_gwpx8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4.91666, 0.5, 9.28333)
+
+[node name="Exercise_Bike_Seat" parent="Gym/Equipment/Bikes/Exercise_Bike4" instance=ExtResource("8_2wns8")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, -0.150544, -0.0144196)
+
+[node name="Exercise_Bike_Pedal_A" parent="Gym/Equipment/Bikes/Exercise_Bike4" instance=ExtResource("9_wd73p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike4/Exercise_Bike_Pedal_A" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike_Pedal_A2" parent="Gym/Equipment/Bikes/Exercise_Bike4" instance=ExtResource("9_wd73p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8147e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike4/Exercise_Bike_Pedal_A2" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike5" parent="Gym/Equipment/Bikes" instance=ExtResource("7_gwpx8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.25, 0.5, 9.28333)
+
+[node name="Exercise_Bike_Seat" parent="Gym/Equipment/Bikes/Exercise_Bike5" instance=ExtResource("8_2wns8")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, -0.150544, -0.0144196)
+
+[node name="Exercise_Bike_Pedal_A" parent="Gym/Equipment/Bikes/Exercise_Bike5" instance=ExtResource("9_wd73p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike5/Exercise_Bike_Pedal_A" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike_Pedal_A2" parent="Gym/Equipment/Bikes/Exercise_Bike5" instance=ExtResource("9_wd73p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8147e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike5/Exercise_Bike_Pedal_A2" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike6" parent="Gym/Equipment/Bikes" instance=ExtResource("7_gwpx8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.58333, 0.5, 9.28333)
+
+[node name="Exercise_Bike_Seat" parent="Gym/Equipment/Bikes/Exercise_Bike6" instance=ExtResource("8_2wns8")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, -0.150544, -0.0144196)
+
+[node name="Exercise_Bike_Pedal_A" parent="Gym/Equipment/Bikes/Exercise_Bike6" instance=ExtResource("9_wd73p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike6/Exercise_Bike_Pedal_A" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="Exercise_Bike_Pedal_A2" parent="Gym/Equipment/Bikes/Exercise_Bike6" instance=ExtResource("9_wd73p")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8147e-06, 0.416667, 0)
+
+[node name="Exercise_Bike_Pedal_B" parent="Gym/Equipment/Bikes/Exercise_Bike6/Exercise_Bike_Pedal_A2" instance=ExtResource("10_ycqak")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, -0.25, 0)
+
+[node name="BikeArea" type="Area3D" parent="Gym/Equipment/Bikes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 9.66667)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/Bikes/BikeArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.58333, 1.08333, -0.250001)
+shape = SubResource("BoxShape3D_880cq")
+
+[node name="Mats" type="Node3D" parent="Gym/Equipment"]
+
+[node name="Sp_Mat_1" parent="Gym/Equipment/Mats" instance=ExtResource("8_4iok1")]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 9.66666, 0.416667, -6)
+
+[node name="Sp_Mat_2" parent="Gym/Equipment/Mats" instance=ExtResource("8_4iok1")]
+transform = Transform3D(0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.573576, 5.16666, 0.416667, -7.41666)
+
+[node name="Sp_Mat_3" parent="Gym/Equipment/Mats" instance=ExtResource("8_4iok1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08333, 0.416667, -6)
+
+[node name="Sp_Mat_4" parent="Gym/Equipment/Mats" instance=ExtResource("8_4iok1")]
+transform = Transform3D(0.906308, 0, -0.422618, 0, 1, 0, 0.422618, 0, 0.906308, 6.49999, 0.416667, -6.41667)
+
+[node name="Sp_Mat_5" parent="Gym/Equipment/Mats" instance=ExtResource("9_5ax74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.66666, 0.416667, -9.33333)
+
+[node name="Sp_Mat_6" parent="Gym/Equipment/Mats" instance=ExtResource("9_5ax74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.99999, 0.416667, -9.33333)
+
+[node name="Sp_Mat_7" parent="Gym/Equipment/Mats" instance=ExtResource("8_4iok1")]
+transform = Transform3D(0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, 0.173648, 4.33333, 0.416667, -9)
+
+[node name="Kettlebell" parent="Gym/Equipment/Mats" instance=ExtResource("10_l3xu0")]
+transform = Transform3D(-0.422618, 0, -0.906308, 0, 1, 0, 0.906308, 0, -0.422618, 10.5, 0.5, -7.58333)
+
+[node name="Kettlebell2" parent="Gym/Equipment/Mats" instance=ExtResource("10_l3xu0")]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 5.58333, 0.5, -10.0833)
+
+[node name="MatArea" type="Area3D" parent="Gym/Equipment/Mats"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66667, 1, -8.58333)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/Mats/MatArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.583333, 0, 0.583334)
+shape = SubResource("BoxShape3D_waiyh")
+
+[node name="Dumbells" type="Node3D" parent="Gym/Equipment"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 1.33333)
+
+[node name="Weight_Stand_1" parent="Gym/Equipment/Dumbells" instance=ExtResource("11_3g3mp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.1818, 0.416667, 0)
+
+[node name="Weight_A2" parent="Gym/Equipment/Dumbells/Weight_Stand_1" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3115e-09, 1.12282, 0.075758)
+
+[node name="Weight_A3" parent="Gym/Equipment/Dumbells/Weight_Stand_1" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.03027e-09, 1.12282, 0.115079)
+
+[node name="Weight_A4" parent="Gym/Equipment/Dumbells/Weight_Stand_1" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3115e-09, 0.804809, 0.075758)
+
+[node name="Weight_A5" parent="Gym/Equipment/Dumbells/Weight_Stand_1" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.03027e-09, 0.804809, 0.115079)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Weight_Stand_1" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 2.84152e-09, 0.467205, 0.0650063)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Weight_Stand_1" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 5.61101e-09, 0.467205, 0.128365)
+
+[node name="Weight_Stand_2" parent="Gym/Equipment/Dumbells" instance=ExtResource("11_3g3mp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.1818, 0.416667, 0.833333)
+
+[node name="Weight_A2" parent="Gym/Equipment/Dumbells/Weight_Stand_2" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3115e-09, 1.12282, 0.075758)
+
+[node name="Weight_A3" parent="Gym/Equipment/Dumbells/Weight_Stand_2" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.03027e-09, 1.12282, 0.115079)
+
+[node name="Weight_A4" parent="Gym/Equipment/Dumbells/Weight_Stand_2" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3115e-09, 0.804809, 0.075758)
+
+[node name="Weight_A5" parent="Gym/Equipment/Dumbells/Weight_Stand_2" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.03027e-09, 0.804809, 0.115079)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Weight_Stand_2" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 2.84152e-09, 0.467205, 0.0650063)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Weight_Stand_2" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 5.61101e-09, 0.467205, 0.128365)
+
+[node name="Dumbbells_1" parent="Gym/Equipment/Dumbells" instance=ExtResource("14_w8p8t")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 10.0758, 0.454545, -0.833333)
+
+[node name="Dumbbells_2" parent="Gym/Equipment/Dumbells" instance=ExtResource("14_w8p8t")]
+transform = Transform3D(-2.82219e-08, 3.09086e-08, 1, -1, -3.09086e-08, -2.82219e-08, 3.09086e-08, -1, 3.09086e-08, 9.69697, 0.557682, -0.833333)
+
+[node name="Dumbbells_3" parent="Gym/Equipment/Dumbells" instance=ExtResource("15_h36mb")]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 9.92424, 0.530303, 1.74242)
+
+[node name="Dumbbells_4" parent="Gym/Equipment/Dumbells" instance=ExtResource("15_h36mb")]
+transform = Transform3D(0.996195, 0, 0.0871558, 0, 1, 0, -0.0871558, 0, 0.996195, 9.92424, 0.530303, 2.12121)
+
+[node name="Dumbells" type="Node3D" parent="Gym/Equipment/Dumbells"]
+transform = Transform3D(-0.818182, 0, 7.15277e-08, 0, 0.818182, 0, -7.15277e-08, 0, -0.818182, -1.44496e-06, 0, -2.5)
+
+[node name="Weight_Bar_C" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5556, 0.583333, -0.555555)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C2" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5556, 0.583333, -0.185185)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C2" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C2" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C3" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(0.996194, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.996194, -11.8913, 0.583333, -0.647443)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C3" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C3" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C4" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(0.996194, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.996194, -11.9236, 0.583333, -0.278482)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C4" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C4" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C5" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -12.1405, 0.583333, 0.284088)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C5" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C5" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C6" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -12.0447, 0.583333, 0.641839)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C6" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C6" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C7" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.583333, 1.01852)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C7" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C7" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C8" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.583333, 1.38889)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C8" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C8" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C9" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -12.0447, 0.583333, 1.95075)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C9" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C9" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_Bar_C10" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("32_kshw5")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -12.1405, 0.583333, 2.30851)
+
+[node name="Weight_B" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C10" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/Dumbells/Dumbells/Weight_Bar_C10" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, -1.0555e-07, 0, 1, 0, 1.0555e-07, 0, -1, -0.166667, 0, 0)
+
+[node name="Weight_A" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.462963, -1.2037)
+
+[node name="Weight_A2" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.506423, -1.2037)
+
+[node name="Weight_A3" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.544296, -1.2037)
+
+[node name="Weight_A4" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.587756, -1.2037)
+
+[node name="Weight_A5" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.462963, -1.48148)
+
+[node name="Weight_A6" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.506423, -1.48148)
+
+[node name="Weight_A7" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.544296, -1.48148)
+
+[node name="Weight_A8" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -12.037, 0.587756, -1.48148)
+
+[node name="Weight_A9" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.462963, -1.2037)
+
+[node name="Weight_A10" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.506423, -1.2037)
+
+[node name="Weight_A11" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.544296, -1.2037)
+
+[node name="Weight_A12" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.587756, -1.2037)
+
+[node name="Weight_A13" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.462963, -1.48148)
+
+[node name="Weight_A14" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.506423, -1.48148)
+
+[node name="Weight_A15" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.544296, -1.48148)
+
+[node name="Weight_A16" parent="Gym/Equipment/Dumbells/Dumbells" instance=ExtResource("12_un7og")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.7593, 0.587756, -1.48148)
+
+[node name="Benches" type="Node3D" parent="Gym/Equipment/Dumbells"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, 0, -0.378789)
+
+[node name="Bench_A" parent="Gym/Equipment/Dumbells/Benches" instance=ExtResource("19_hmnq7")]
+transform = Transform3D(0.0871556, 0, 0.996195, 0, 1, 0, -0.996195, 0, 0.0871556, 7, 0.416667, 0)
+
+[node name="Bench_A2" parent="Gym/Equipment/Dumbells/Benches" instance=ExtResource("19_hmnq7")]
+transform = Transform3D(0.939692, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939692, 4.66667, 0.416667, 0)
+
+[node name="Bench_B" parent="Gym/Equipment/Dumbells/Benches" instance=ExtResource("20_d1cco")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 5, 0.416667, 2.75)
+
+[node name="Bench_B2" parent="Gym/Equipment/Dumbells/Benches" instance=ExtResource("20_d1cco")]
+transform = Transform3D(0.984807, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984807, 7, 0.416667, 2.75)
+
+[node name="Bench_C" parent="Gym/Equipment/Dumbells/Benches" instance=ExtResource("24_xxmrs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0.416667, -2.25)
+
+[node name="Bench_D" parent="Gym/Equipment/Dumbells/Benches" instance=ExtResource("25_0h2n2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91666, 0.416667, -2)
+
+[node name="DumbellArea" type="Area3D" parent="Gym/Equipment/Dumbells"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62121, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/Dumbells/DumbellArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69697, 0.909091, -0.780303)
+shape = SubResource("BoxShape3D_8t6x8")
+
+[node name="BackMachines" type="Node3D" parent="Gym/Equipment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.91667)
+
+[node name="E_Machine_2" parent="Gym/Equipment/BackMachines" instance=ExtResource("21_hdhfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36594e-07, 0.416667, 0.0833333)
+
+[node name="E_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("22_aqq58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.773118, -0.19129)
+
+[node name="Weight_D" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.0833333, -0.575257)
+
+[node name="Weight_D2" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.166667, -0.575257)
+
+[node name="Weight_D3" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.25, -0.575257)
+
+[node name="Weight_D4" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.333333, -0.575257)
+
+[node name="Weight_D9" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.75, -0.575257)
+
+[node name="Weight_D10" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.833333, -0.575257)
+
+[node name="Weight_D11" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.916667, -0.575257)
+
+[node name="Weight_D12" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 1, -0.575257)
+
+[node name="Weight_D5" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.416667, -0.575257)
+
+[node name="Weight_D6" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.5, -0.575257)
+
+[node name="Weight_D7" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.583333, -0.575257)
+
+[node name="Weight_D8" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.666667, -0.575257)
+
+[node name="PullDown_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_2" instance=ExtResource("25_l2kl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00248641, 2.03548, 0.111233)
+
+[node name="E_Machine_3" parent="Gym/Equipment/BackMachines" instance=ExtResource("23_fn588")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08333, 0.416667, 0.333333)
+
+[node name="PullDown_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("25_l2kl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01918, 0.113751)
+
+[node name="Weight_D13" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.465046, -0.65859)
+
+[node name="Weight_D14" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.548379, -0.65859)
+
+[node name="Weight_D15" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.631713, -0.65859)
+
+[node name="Weight_D16" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.715046, -0.65859)
+
+[node name="Weight_D17" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.13171, -0.65859)
+
+[node name="Weight_D18" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.21505, -0.65859)
+
+[node name="Weight_D19" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.29838, -0.65859)
+
+[node name="Weight_D20" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.38171, -0.65859)
+
+[node name="Weight_D21" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.798379, -0.65859)
+
+[node name="Weight_D22" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.881712, -0.65859)
+
+[node name="Weight_D23" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.965046, -0.65859)
+
+[node name="Weight_D24" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.04838, -0.65859)
+
+[node name="E_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_3" instance=ExtResource("22_aqq58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598228, 0.469925)
+
+[node name="E_Machine_4" parent="Gym/Equipment/BackMachines" instance=ExtResource("26_uosw2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0833334, 0.416667, -2.66667)
+
+[node name="Weight_D13" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.0833332, -0.654419)
+
+[node name="Weight_D14" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.166667, -0.654419)
+
+[node name="Weight_D15" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.25, -0.654419)
+
+[node name="Weight_D16" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.333333, -0.654419)
+
+[node name="Weight_D17" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.75, -0.654419)
+
+[node name="Weight_D18" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.833333, -0.654419)
+
+[node name="Weight_D19" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.916666, -0.654419)
+
+[node name="Weight_D20" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 1, -0.654419)
+
+[node name="Weight_D21" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.416667, -0.654419)
+
+[node name="Weight_D22" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.5, -0.654419)
+
+[node name="Weight_D23" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.583333, -0.654419)
+
+[node name="Weight_D24" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.666666, -0.654419)
+
+[node name="E_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("22_aqq58")]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -2.98023e-08, 0.58139, 0.469595)
+
+[node name="PullDown_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_4" instance=ExtResource("27_1dpj2")]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -7.45058e-09, 2.02086, 0.109162)
+
+[node name="E_Machine_5" parent="Gym/Equipment/BackMachines" instance=ExtResource("27_igtvv")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.08333, 0.416667, -2.75)
+
+[node name="Weight_D25" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.0833332, -0.654419)
+
+[node name="Weight_D26" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.166667, -0.654419)
+
+[node name="Weight_D27" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.25, -0.654419)
+
+[node name="Weight_D28" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.333333, -0.654419)
+
+[node name="Weight_D29" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.75, -0.654419)
+
+[node name="Weight_D30" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.833333, -0.654419)
+
+[node name="Weight_D31" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.916666, -0.654419)
+
+[node name="Weight_D32" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 1, -0.654419)
+
+[node name="Weight_D33" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.416667, -0.654419)
+
+[node name="Weight_D34" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.5, -0.654419)
+
+[node name="Weight_D35" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.583333, -0.654419)
+
+[node name="Weight_D36" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.666666, -0.654419)
+
+[node name="Pec_Machine_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_5" instance=ExtResource("32_ln001")]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -4.76837e-07, 0, 0)
+
+[node name="PecDeck_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_5/Pec_Machine_Ac_2" instance=ExtResource("33_856s6")]
+transform = Transform3D(0.996195, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.996195, 0.0833325, 1.66667, 0)
+
+[node name="PecDeck_Ac_3" parent="Gym/Equipment/BackMachines/E_Machine_5/Pec_Machine_Ac_2" instance=ExtResource("33_856s6")]
+transform = Transform3D(-0.996195, 0, -0.0871559, 0, 1, 0, 0.0871559, 0, -0.996195, -0.0833349, 1.66667, 0)
+
+[node name="E_Machine_6" parent="Gym/Equipment/BackMachines" instance=ExtResource("21_hdhfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16667, 0.416667, 0.0833333)
+
+[node name="E_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("22_aqq58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.773118, -0.19129)
+
+[node name="Weight_D" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.0833333, -0.575257)
+
+[node name="Weight_D2" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.166667, -0.575257)
+
+[node name="Weight_D3" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.25, -0.575257)
+
+[node name="Weight_D4" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.333333, -0.575257)
+
+[node name="Weight_D9" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.75, -0.575257)
+
+[node name="Weight_D10" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.833333, -0.575257)
+
+[node name="Weight_D11" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.916667, -0.575257)
+
+[node name="Weight_D12" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 1, -0.575257)
+
+[node name="Weight_D5" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.416667, -0.575257)
+
+[node name="Weight_D6" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.5, -0.575257)
+
+[node name="Weight_D7" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.583333, -0.575257)
+
+[node name="Weight_D8" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19209e-07, 0.666667, -0.575257)
+
+[node name="PullDown_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_6" instance=ExtResource("25_l2kl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00248641, 2.03548, 0.111233)
+
+[node name="E_Machine_7" parent="Gym/Equipment/BackMachines" instance=ExtResource("23_fn588")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25, 0.416667, 0.333333)
+
+[node name="PullDown_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("25_l2kl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01918, 0.113751)
+
+[node name="Weight_D13" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.465046, -0.65859)
+
+[node name="Weight_D14" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.548379, -0.65859)
+
+[node name="Weight_D15" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.631713, -0.65859)
+
+[node name="Weight_D16" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.715046, -0.65859)
+
+[node name="Weight_D17" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.13171, -0.65859)
+
+[node name="Weight_D18" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.21505, -0.65859)
+
+[node name="Weight_D19" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.29838, -0.65859)
+
+[node name="Weight_D20" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.38171, -0.65859)
+
+[node name="Weight_D21" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.798379, -0.65859)
+
+[node name="Weight_D22" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.881712, -0.65859)
+
+[node name="Weight_D23" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 0.965046, -0.65859)
+
+[node name="Weight_D24" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34465e-07, 1.04838, -0.65859)
+
+[node name="E_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_7" instance=ExtResource("22_aqq58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598228, 0.469925)
+
+[node name="E_Machine_8" parent="Gym/Equipment/BackMachines" instance=ExtResource("26_uosw2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.08333, 0.416667, -2.66667)
+
+[node name="Weight_D13" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.0833332, -0.654419)
+
+[node name="Weight_D14" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.166667, -0.654419)
+
+[node name="Weight_D15" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.25, -0.654419)
+
+[node name="Weight_D16" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.333333, -0.654419)
+
+[node name="Weight_D17" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.75, -0.654419)
+
+[node name="Weight_D18" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.833333, -0.654419)
+
+[node name="Weight_D19" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.916666, -0.654419)
+
+[node name="Weight_D20" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 1, -0.654419)
+
+[node name="Weight_D21" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.416667, -0.654419)
+
+[node name="Weight_D22" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.5, -0.654419)
+
+[node name="Weight_D23" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.583333, -0.654419)
+
+[node name="Weight_D24" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0022438, 0.666666, -0.654419)
+
+[node name="E_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("22_aqq58")]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -2.98023e-08, 0.58139, 0.469595)
+
+[node name="PullDown_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_8" instance=ExtResource("27_1dpj2")]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, -7.45058e-09, 2.02086, 0.109162)
+
+[node name="E_Machine_9" parent="Gym/Equipment/BackMachines" instance=ExtResource("27_igtvv")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.25, 0.416667, -2.75)
+
+[node name="Weight_D25" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.0833332, -0.654419)
+
+[node name="Weight_D26" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.166667, -0.654419)
+
+[node name="Weight_D27" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.25, -0.654419)
+
+[node name="Weight_D28" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.333333, -0.654419)
+
+[node name="Weight_D29" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.75, -0.654419)
+
+[node name="Weight_D30" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.833333, -0.654419)
+
+[node name="Weight_D31" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.916666, -0.654419)
+
+[node name="Weight_D32" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 1, -0.654419)
+
+[node name="Weight_D33" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.416667, -0.654419)
+
+[node name="Weight_D34" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.5, -0.654419)
+
+[node name="Weight_D35" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.583333, -0.654419)
+
+[node name="Weight_D36" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("23_qlyw6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00171781, 0.666666, -0.654419)
+
+[node name="Pec_Machine_Ac_1" parent="Gym/Equipment/BackMachines/E_Machine_9" instance=ExtResource("32_ln001")]
+
+[node name="PecDeck_Ac_2" parent="Gym/Equipment/BackMachines/E_Machine_9/Pec_Machine_Ac_1" instance=ExtResource("33_856s6")]
+transform = Transform3D(0.996195, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.996195, 0.0833325, 1.66667, 0)
+
+[node name="PecDeck_Ac_3" parent="Gym/Equipment/BackMachines/E_Machine_9/Pec_Machine_Ac_1" instance=ExtResource("33_856s6")]
+transform = Transform3D(-0.996195, 0, -0.0871559, 0, 1, 0, 0.0871559, 0, -0.996195, -0.0833349, 1.66667, 0)
+
+[node name="Sm_Machine" parent="Gym/Equipment/BackMachines" instance=ExtResource("32_l8m0q")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 1.91663, 0.416667, -1.25)
+
+[node name="BackMachinesArea" type="Area3D" parent="Gym/Equipment/BackMachines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/BackMachines/BackMachinesArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0, -1.43333)
+shape = SubResource("BoxShape3D_a4bcy")
+
+[node name="BenchPress" type="Node3D" parent="Gym/Equipment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
+
+[node name="Bench_Press" parent="Gym/Equipment/BenchPress" instance=ExtResource("38_ykskq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.6667, 0.416667, 1.66667)
+
+[node name="EzBar" parent="Gym/Equipment/BenchPress/Bench_Press" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0.916667, -0.14724)
+
+[node name="Weight_B" parent="Gym/Equipment/BenchPress/Bench_Press/EzBar" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.666667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/BenchPress/Bench_Press/EzBar" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.666667, 0, 0)
+
+[node name="Bench_Press2" parent="Gym/Equipment/BenchPress" instance=ExtResource("38_ykskq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.6667, 0.416667, -0.333334)
+
+[node name="EzBar2" parent="Gym/Equipment/BenchPress/Bench_Press2" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49012e-07, 0.916667, -0.14724)
+
+[node name="Weight_B" parent="Gym/Equipment/BenchPress/Bench_Press2/EzBar2" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.666667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/BenchPress/Bench_Press2/EzBar2" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.666667, 0, 0)
+
+[node name="Bench_Press3" parent="Gym/Equipment/BenchPress" instance=ExtResource("38_ykskq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.6667, 0.416667, -2.5)
+
+[node name="EzBar3" parent="Gym/Equipment/BenchPress/Bench_Press3" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43051e-06, 0.916667, -0.14724)
+
+[node name="Weight_B" parent="Gym/Equipment/BenchPress/Bench_Press3/EzBar3" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.666667, 0, 0)
+
+[node name="Weight_B2" parent="Gym/Equipment/BenchPress/Bench_Press3/EzBar3" instance=ExtResource("13_3a3nu")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.666667, 0, 0)
+
+[node name="Barbell_Stand_1" parent="Gym/Equipment/BenchPress" instance=ExtResource("12_6no6e")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -10.1667, 0.416667, -4.83334)
+
+[node name="Barbell_1" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.462278, -0.493035)
+
+[node name="Barbell_2" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.454546, 0.487343)
+
+[node name="Barbell_3" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.769534, -0.44191)
+
+[node name="Barbell_4" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764614, 0.454694)
+
+[node name="Barbell_5" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.769534, -0.44191)
+
+[node name="Barbell_6" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.764614, 0.454694)
+
+[node name="Barbell_7" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68079, -0.374572)
+
+[node name="Barbell_8" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("17_bx0xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68625, 0.37066)
+
+[node name="EzBar" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06273, -0.425119)
+
+[node name="EzBar2" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06273, 0.414446)
+
+[node name="EzBar3" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38141, -0.396021)
+
+[node name="EzBar4" parent="Gym/Equipment/BenchPress/Barbell_Stand_1" instance=ExtResource("18_k123i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37732, 0.395188)
+
+[node name="BenchpressArea" type="Area3D" parent="Gym/Equipment/BenchPress"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4167, 0.916667, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/BenchPress/BenchpressArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.333333, 0, -1.58333)
+shape = SubResource("BoxShape3D_iivlo")
+
+[node name="Lobby" type="Node3D" parent="Gym"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.8, 0, -12.2)
+
+[node name="Desk_1" parent="Gym/Lobby" instance=ExtResource("8_5f4sk")]
+transform = Transform3D(-5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, 0.200004, 0.5, 5.93837)
+
+[node name="Keyboard" parent="Gym/Lobby/Desk_1" instance=ExtResource("9_aw1sg")]
+transform = Transform3D(-0.99659, 0, 0.0825124, 0, 1, 0, -0.0825124, 0, -0.99659, 0.4, 1.03348, -0.33852)
+
+[node name="Mouse" parent="Gym/Lobby/Desk_1" instance=ExtResource("10_e556c")]
+transform = Transform3D(0.974928, 0, 0.222519, 0, 1, 0, -0.222519, 0, 0.974928, 0, 1.04069, -0.36932)
+
+[node name="PC_Screen" parent="Gym/Lobby/Desk_1" instance=ExtResource("11_ehpxe")]
+transform = Transform3D(-0.819152, 0, -0.573576, 0, 1, 0, 0.573576, 0, -0.819152, 0.8, 1.03929, -0.1)
+
+[node name="Plant_Deco" parent="Gym/Lobby/Desk_1" instance=ExtResource("12_ye7yc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1, -0.1)
+
+[node name="Sofa_1" parent="Gym/Lobby" instance=ExtResource("14_l0en8")]
+transform = Transform3D(-5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, 1.4, 0.5, -0.3)
+
+[node name="Sofa_2" parent="Gym/Lobby" instance=ExtResource("13_dr0tc")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.4, 0.5, -2.8)
+
+[node name="Sofa_3" parent="Gym/Lobby" instance=ExtResource("15_5h2g8")]
+transform = Transform3D(-1.2, 0, 1.81195e-07, 0, 1.2, 0, -1.81195e-07, 0, -1.2, -1.2, 0.5, 1.93837)
+
+[node name="CTable_3" parent="Gym/Lobby" instance=ExtResource("15_1a0em")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.2, 0.5, -0.400003)
+
+[node name="CTable_3_Glass" parent="Gym/Lobby/CTable_3" instance=ExtResource("16_ol7oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Mounted_TV" parent="Gym/Lobby" instance=ExtResource("17_3x5vg")]
+transform = Transform3D(2, 0, 3.17865e-08, 0, 2, 0, -3.17865e-08, 0, 2, -1.39999, 3.4, -3.20001)
+
+[node name="Painting" parent="Gym/Lobby" instance=ExtResource("18_25ouv")]
+transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 1.8, 3.3, 5.9)
+
+[node name="Board" parent="Gym" instance=ExtResource("60_6j5i8")]
+transform = Transform3D(0.00309017, 0, 0.00951056, 0, 0.01, 0, -0.00951056, 0, 0.00309017, -13.9, 2.4, -5.6)
+
+[node name="Marker" parent="Gym/Board" instance=ExtResource("61_knqf7")]
+transform = Transform3D(0.0954914, 0.951056, 0.293893, -0.951056, -4.37114e-08, 0.309017, 0.293893, -0.309017, 0.904508, -22.0973, -83.1429, 5.77002)
+
+[node name="WelcomeText" type="Label3D" parent="Gym/Board"]
+transform = Transform3D(0.951057, 0, 0.309017, 0, 1, 0, -0.309017, 0, 0.951057, -1.62015, 68.9828, -4.98633)
+pixel_size = 0.3
+shaded = true
+texture_filter = 4
+modulate = Color(1, 0, 0, 1)
+text = "Welcome to the Gym!"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="Exercises" type="Label3D" parent="Gym/Board"]
+transform = Transform3D(0.951057, 0, 0.309017, 0, 1, 0, -0.309017, 0, 0.951057, -106.237, 38.9829, 29.0055)
+pixel_size = 0.3
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "Exercises
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="treadmill" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -4, -20.893, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "1. Treadmill"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="tr_progress" type="Label3D" parent="Gym/Board/Exercises/treadmill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 0)
+pixel_size = 0.2
+shaded = true
+modulate = Color(1, 0, 0, 1)
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="bike" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -10.7607, -30.8934, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "2. Bike
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="bike_progress" type="Label3D" parent="Gym/Board/Exercises/bike"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.7607, 0.000427246, 0)
+pixel_size = 0.2
+shaded = true
+modulate = Color(1, 0, 0, 1)
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="benchpress" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -0.360931, -40.8935, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "3. Bench press"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="bench_progress" type="Label3D" parent="Gym/Board/Exercises/benchpress"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.361, 0.00050354, 0)
+pixel_size = 0.2
+shaded = true
+modulate = Color(1, 0, 0, 1)
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="mat" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -11.4235, -50.8935, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "4. Mat"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="mat_progress" type="Label3D" parent="Gym/Board/Exercises/mat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.4236, 0.000457764, 0)
+pixel_size = 0.2
+shaded = true
+modulate = Color(1, 0, 0, 1)
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="dumbells" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -3.96164, -60.8935, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "5. Dumbells"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="dum_progress" type="Label3D" parent="Gym/Board/Exercises/dumbells"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9618, 0.00050354, 0)
+pixel_size = 0.2
+shaded = true
+modulate = Color(1, 0, 0, 1)
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="backmachine" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, 2.05502, -70.8935, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "6. Back machine
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="back_progress" type="Label3D" parent="Gym/Board/Exercises/backmachine"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.9451, 0.000473022, 0)
+pixel_size = 0.2
+shaded = true
+modulate = Color(1, 0, 0, 1)
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="note" type="Label3D" parent="Gym/Board/Exercises"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.075, -85.1647, 0)
+pixel_size = 0.15
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "* Progress will update here!
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="Help" type="Label3D" parent="Gym/Board"]
+transform = Transform3D(0.951057, 0, 0.309017, 0, 1, 0, -0.309017, 0, 0.951057, 26.9109, 38.9829, -14.257)
+pixel_size = 0.3
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "How to play
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+
+[node name="Text" type="Label3D" parent="Gym/Board/Help"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3309, -30, 0.00012207)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "Exercise using the equipment in the gym 
+and progress through each category.
+
+Don't forget to rest when you are fatigued!"
+font = ExtResource("62_nddp4")
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="MovementKeys" type="Sprite3D" parent="Gym/Board/Help"]
+transform = Transform3D(20, 0, -2.27374e-12, 0, 20, 0, 2.27374e-12, 0, 20, -14.1415, -70, 0)
+cast_shadow = 0
+shaded = true
+texture_filter = 5
+texture = ExtResource("63_87bjg")
+
+[node name="MovementText" type="Label3D" parent="Gym/Board/Help/MovementKeys"]
+transform = Transform3D(0.05, 0, 5.32907e-15, 0, 0.05, 0, -5.32907e-15, 0, 0.05, 0.783453, -2.86102e-06, 0)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "Movement"
+font = ExtResource("62_nddp4")
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="InteractKey" type="Sprite3D" parent="Gym/Board/Help"]
+transform = Transform3D(15, 0, -1.7053e-12, 0, 15, 0, 1.7053e-12, 0, 15, 45.8584, -70, 0)
+cast_shadow = 0
+shaded = true
+texture_filter = 5
+texture = ExtResource("64_ciqqb")
+
+[node name="InteractText" type="Label3D" parent="Gym/Board/Help/InteractKey"]
+transform = Transform3D(0.0666667, 0, 7.10543e-15, 0, 0.0666667, 0, -7.10543e-15, 0, 0.0666667, 1.0446, -2.86102e-06, -7.62939e-06)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "Interact
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+horizontal_alignment = 0
+
+[connection signal="body_entered" from="Gym/Walls/door/DoorArea" to="Player/UI" method="_on_door_entered"]
+[connection signal="body_exited" from="Gym/Walls/door/DoorArea" to="Player/UI" method="_on_door_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_area_body_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Mats/MatArea" to="Player/UI" method="_on_mat_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Mats/MatArea" to="Player/UI" method="_on_mat_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Dumbells/DumbellArea" to="Player/UI" method="_on_dumbell_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Dumbells/DumbellArea" to="Player/UI" method="_on_dumbell_exited"]
+[connection signal="body_entered" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player/UI" method="on_back_machines_entered"]
+[connection signal="body_exited" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player/UI" method="_on_back_machines_exited"]
+[connection signal="body_entered" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_entered"]
+[connection signal="body_exited" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_exited"]

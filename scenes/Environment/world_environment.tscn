@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://djuoxds0qsiic"]
+
+[ext_resource type="Texture2D" uid="uid://thqvgpo73cua" path="res://assets/Textures/sky.png" id="1_2eyf4"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_htpg2"]
+panorama = ExtResource("1_2eyf4")
+
+[sub_resource type="Sky" id="Sky_5j62h"]
+sky_material = SubResource("PanoramaSkyMaterial_htpg2")
+
+[sub_resource type="Environment" id="Environment_myihf"]
+background_mode = 2
+sky = SubResource("Sky_5j62h")
+tonemap_mode = 3
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_y_scale = 0
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_myihf")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 30.0995, 0)
+shadow_enabled = true
