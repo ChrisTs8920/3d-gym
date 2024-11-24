@@ -1,70 +1,73 @@
-[gd_scene load_steps=75 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=78 format=3 uid="uid://2r2xorepwlip"]
 
-[ext_resource type="ArrayMesh" uid="uid://ciyuvidf7s8lh" path="res://assets/Gym general/terrain/Terrain001_1K.obj" id="1_01uq1"]
+[ext_resource type="ArrayMesh" uid="uid://ciyuvidf7s8lh" path="res://assets/Gym/terrain/Terrain001_1K.obj" id="1_01uq1"]
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/Environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
 [ext_resource type="Material" uid="uid://dnplp0inlcgg3" path="res://assets/Materials/terrain.tres" id="2_skptw"]
 [ext_resource type="PackedScene" uid="uid://bx1i634h2xb1d" path="res://scenes/Environment/ground.tscn" id="2_yuwpt"]
 [ext_resource type="PackedScene" uid="uid://bn5uphvn0cu38" path="res://scenes/Environment/wall.tscn" id="3_ot1kd"]
 [ext_resource type="Texture2D" uid="uid://j7xny4awx6ju" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Color.jpg" id="5_5pxup"]
-[ext_resource type="PackedScene" uid="uid://8i8upkiygdeo" path="res://assets/Gym general/glass_window/scene.gltf" id="5_cc8ki"]
+[ext_resource type="PackedScene" uid="uid://8i8upkiygdeo" path="res://assets/Gym/glass_window/scene.gltf" id="5_cc8ki"]
 [ext_resource type="PackedScene" uid="uid://xlqmwb43hp4v" path="res://scenes/Environment/ceiling.tscn" id="5_vdm7y"]
-[ext_resource type="PackedScene" uid="uid://br4ok3f26bq3s" path="res://assets/Gym general/door_with_frame/scene.gltf" id="6_1lp3k"]
-[ext_resource type="PackedScene" uid="uid://c07rrao6iy5nq" path="res://assets/Equipment/FBX/Treadmill_1_Main.fbx" id="6_2xra4"]
+[ext_resource type="PackedScene" uid="uid://br4ok3f26bq3s" path="res://assets/Gym/door_with_frame/scene.gltf" id="6_1lp3k"]
+[ext_resource type="PackedScene" uid="uid://c07rrao6iy5nq" path="res://assets/Gym/Equipment/FBX/Treadmill_1_Main.fbx" id="6_2xra4"]
 [ext_resource type="Texture2D" uid="uid://bsjpbxfokteth" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Roughness.jpg" id="6_8enqf"]
 [ext_resource type="Texture2D" uid="uid://qpivytj80c3k" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Displacement.jpg" id="6_chwiy"]
-[ext_resource type="PackedScene" uid="uid://dncrcyoh3dyx0" path="res://scenes/player/ui.tscn" id="6_dy26r"]
+[ext_resource type="PackedScene" uid="uid://dncrcyoh3dyx0" path="res://scenes/ui/ui.tscn" id="6_dy26r"]
 [ext_resource type="Texture2D" uid="uid://dyptuxero30i1" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_NormalDX.jpg" id="6_i7okf"]
-[ext_resource type="PackedScene" uid="uid://coyxfgyuon2hb" path="res://assets/Equipment/FBX/Exercise_Bike.fbx" id="7_gwpx8"]
-[ext_resource type="PackedScene" uid="uid://bhggcevqodvoc" path="res://assets/Equipment/FBX/Exercise_Bike_Seat.fbx" id="8_2wns8"]
-[ext_resource type="PackedScene" uid="uid://buq7ij5osxvoq" path="res://assets/Equipment/FBX/Sp_Mat_1.fbx" id="8_4iok1"]
-[ext_resource type="PackedScene" uid="uid://bufbfmdvif1o" path="res://assets/Equipment/FBX/Desk_1.fbx" id="8_5f4sk"]
-[ext_resource type="PackedScene" uid="uid://b1ej5pmdps6k3" path="res://assets/Equipment/FBX/Sp_Mat_2.fbx" id="9_5ax74"]
-[ext_resource type="PackedScene" uid="uid://b3piudacf3y2t" path="res://assets/Equipment/FBX/Keyboard.fbx" id="9_aw1sg"]
-[ext_resource type="PackedScene" uid="uid://bg7od2e87itq3" path="res://assets/Equipment/FBX/Exercise_Bike_Pedal_A.fbx" id="9_wd73p"]
-[ext_resource type="PackedScene" uid="uid://dcw03n5teex6f" path="res://assets/Equipment/FBX/Mouse.fbx" id="10_e556c"]
-[ext_resource type="PackedScene" uid="uid://ch3dllx43rdfm" path="res://assets/Equipment/FBX/Kettlebell.fbx" id="10_l3xu0"]
-[ext_resource type="PackedScene" uid="uid://cyla8iscrrpjv" path="res://assets/Equipment/FBX/Exercise_Bike_Pedal_B.fbx" id="10_ycqak"]
-[ext_resource type="PackedScene" uid="uid://dn746pss0nbwq" path="res://assets/Equipment/FBX/Weight_Stand_1.fbx" id="11_3g3mp"]
-[ext_resource type="PackedScene" uid="uid://ceh5glgqwxpje" path="res://assets/Equipment/FBX/PC_Screen.fbx" id="11_ehpxe"]
-[ext_resource type="PackedScene" uid="uid://dyrylqg5qu8jj" path="res://assets/Equipment/FBX/Barbell_Stand_1.fbx" id="12_6no6e"]
-[ext_resource type="PackedScene" uid="uid://b6sbpsqjlgnup" path="res://assets/Equipment/FBX/Weight_A.fbx" id="12_un7og"]
-[ext_resource type="PackedScene" uid="uid://bap1go14tjxpa" path="res://assets/Equipment/FBX/Plant_Deco.fbx" id="12_ye7yc"]
-[ext_resource type="PackedScene" uid="uid://b6412ycj50oct" path="res://assets/Equipment/FBX/Weight_B.fbx" id="13_3a3nu"]
-[ext_resource type="PackedScene" uid="uid://bg16xr4tytcjw" path="res://assets/Equipment/FBX/Sofa_2.fbx" id="13_dr0tc"]
-[ext_resource type="PackedScene" uid="uid://ba0px2nfclgur" path="res://assets/Equipment/FBX/Sofa_1.fbx" id="14_l0en8"]
-[ext_resource type="PackedScene" uid="uid://d2f1lx8fpadu1" path="res://assets/Equipment/FBX/Dumbbells_1.fbx" id="14_w8p8t"]
-[ext_resource type="PackedScene" uid="uid://2pkurkg43nqf" path="res://assets/Equipment/FBX/CTable_3.fbx" id="15_1a0em"]
-[ext_resource type="PackedScene" uid="uid://c24m6wdkn808i" path="res://assets/Equipment/FBX/Sofa_3.fbx" id="15_5h2g8"]
-[ext_resource type="PackedScene" uid="uid://c84m5hm86ipb3" path="res://assets/Equipment/FBX/Dumbbells_2.fbx" id="15_h36mb"]
-[ext_resource type="PackedScene" uid="uid://jh0nkeb267xe" path="res://assets/Equipment/FBX/CTable_3_Glass.fbx" id="16_ol7oc"]
-[ext_resource type="PackedScene" uid="uid://dsnbevgpirx6k" path="res://assets/Equipment/FBX/Mounted_TV.fbx" id="17_3x5vg"]
-[ext_resource type="PackedScene" uid="uid://blwkk50v13oll" path="res://assets/Equipment/FBX/Barbell_1.fbx" id="17_bx0xf"]
-[ext_resource type="PackedScene" uid="uid://cfbaqwmt4a2c6" path="res://assets/Equipment/FBX/Painting.fbx" id="18_25ouv"]
-[ext_resource type="PackedScene" uid="uid://b1h6g0l0xbeya" path="res://assets/Equipment/FBX/EzBar.fbx" id="18_k123i"]
-[ext_resource type="PackedScene" uid="uid://d1s1qfqa2c68c" path="res://assets/Equipment/FBX/Bench_A.fbx" id="19_hmnq7"]
-[ext_resource type="PackedScene" uid="uid://c4jt3gvwgnqo2" path="res://assets/Equipment/FBX/Bench_B.fbx" id="20_d1cco"]
-[ext_resource type="PackedScene" uid="uid://upgab53om5fr" path="res://assets/Equipment/FBX/E_Machine_1.fbx" id="21_hdhfh"]
-[ext_resource type="PackedScene" uid="uid://locy5c8r6w0c" path="res://assets/Equipment/FBX/E_Machine_Ac_1.fbx" id="22_aqq58"]
-[ext_resource type="PackedScene" uid="uid://dr7keq61ned0t" path="res://assets/Equipment/FBX/E_Machine_3.fbx" id="23_fn588"]
-[ext_resource type="PackedScene" uid="uid://cp2a5e0rk0pdh" path="res://assets/Equipment/FBX/Weight_D.fbx" id="23_qlyw6"]
-[ext_resource type="PackedScene" uid="uid://bkum7fuw6gtq6" path="res://assets/Equipment/FBX/Bench_C.fbx" id="24_xxmrs"]
-[ext_resource type="PackedScene" uid="uid://c3q58vl7l5ro7" path="res://assets/Equipment/FBX/Bench_D.fbx" id="25_0h2n2"]
-[ext_resource type="PackedScene" uid="uid://dgjnpx450bh3f" path="res://assets/Equipment/FBX/PullDown_Ac_1.fbx" id="25_l2kl7"]
-[ext_resource type="PackedScene" uid="uid://iqspq6i0xke6" path="res://assets/Equipment/FBX/E_Machine_4.fbx" id="26_uosw2"]
-[ext_resource type="PackedScene" uid="uid://e00k2d6qi5co" path="res://assets/Equipment/FBX/PullDown_Ac_2.fbx" id="27_1dpj2"]
-[ext_resource type="PackedScene" uid="uid://bx47gihrd1y61" path="res://assets/Equipment/FBX/E_Machine_5.fbx" id="27_igtvv"]
-[ext_resource type="PackedScene" uid="uid://cpyqmr0edvnv5" path="res://assets/Equipment/FBX/Weight_Bar_C.fbx" id="32_kshw5"]
-[ext_resource type="PackedScene" uid="uid://bm3h750vv31d5" path="res://assets/Equipment/FBX/Sm_Machine.fbx" id="32_l8m0q"]
-[ext_resource type="PackedScene" uid="uid://o3afig4lxum3" path="res://assets/Equipment/FBX/Pec_Machine_Ac_1.fbx" id="32_ln001"]
-[ext_resource type="PackedScene" uid="uid://r662glfkjqc6" path="res://assets/Equipment/FBX/PecDeck_Ac_2.fbx" id="33_856s6"]
-[ext_resource type="PackedScene" uid="uid://026hxc0dwhpe" path="res://assets/Equipment/FBX/Bench_Press.fbx" id="38_ykskq"]
-[ext_resource type="VoxelGIData" uid="uid://c0og1do46v6rn" path="res://scenes/Main.VoxelGI_data.res" id="59_fjeaq"]
-[ext_resource type="PackedScene" uid="uid://b2iw5wxbl43s7" path="res://assets/Gym general/whiteboard/scene.gltf" id="60_6j5i8"]
-[ext_resource type="PackedScene" uid="uid://dvv0sif06rdg1" path="res://assets/Gym general/niceday_whiteboard_marker/scene.gltf" id="61_knqf7"]
+[ext_resource type="PackedScene" uid="uid://coyxfgyuon2hb" path="res://assets/Gym/Equipment/FBX/Exercise_Bike.fbx" id="7_gwpx8"]
+[ext_resource type="PackedScene" uid="uid://bhggcevqodvoc" path="res://assets/Gym/Equipment/FBX/Exercise_Bike_Seat.fbx" id="8_2wns8"]
+[ext_resource type="PackedScene" uid="uid://buq7ij5osxvoq" path="res://assets/Gym/Equipment/FBX/Sp_Mat_1.fbx" id="8_4iok1"]
+[ext_resource type="PackedScene" uid="uid://bufbfmdvif1o" path="res://assets/Gym/Equipment/FBX/Desk_1.fbx" id="8_5f4sk"]
+[ext_resource type="PackedScene" uid="uid://b1ej5pmdps6k3" path="res://assets/Gym/Equipment/FBX/Sp_Mat_2.fbx" id="9_5ax74"]
+[ext_resource type="PackedScene" uid="uid://b3piudacf3y2t" path="res://assets/Gym/Equipment/FBX/Keyboard.fbx" id="9_aw1sg"]
+[ext_resource type="PackedScene" uid="uid://bg7od2e87itq3" path="res://assets/Gym/Equipment/FBX/Exercise_Bike_Pedal_A.fbx" id="9_wd73p"]
+[ext_resource type="PackedScene" uid="uid://dcw03n5teex6f" path="res://assets/Gym/Equipment/FBX/Mouse.fbx" id="10_e556c"]
+[ext_resource type="PackedScene" uid="uid://ch3dllx43rdfm" path="res://assets/Gym/Equipment/FBX/Kettlebell.fbx" id="10_l3xu0"]
+[ext_resource type="PackedScene" uid="uid://cyla8iscrrpjv" path="res://assets/Gym/Equipment/FBX/Exercise_Bike_Pedal_B.fbx" id="10_ycqak"]
+[ext_resource type="PackedScene" uid="uid://dn746pss0nbwq" path="res://assets/Gym/Equipment/FBX/Weight_Stand_1.fbx" id="11_3g3mp"]
+[ext_resource type="PackedScene" uid="uid://ceh5glgqwxpje" path="res://assets/Gym/Equipment/FBX/PC_Screen.fbx" id="11_ehpxe"]
+[ext_resource type="PackedScene" uid="uid://dyrylqg5qu8jj" path="res://assets/Gym/Equipment/FBX/Barbell_Stand_1.fbx" id="12_6no6e"]
+[ext_resource type="PackedScene" uid="uid://b6sbpsqjlgnup" path="res://assets/Gym/Equipment/FBX/Weight_A.fbx" id="12_un7og"]
+[ext_resource type="PackedScene" uid="uid://bap1go14tjxpa" path="res://assets/Gym/Equipment/FBX/Plant_Deco.fbx" id="12_ye7yc"]
+[ext_resource type="PackedScene" uid="uid://b6412ycj50oct" path="res://assets/Gym/Equipment/FBX/Weight_B.fbx" id="13_3a3nu"]
+[ext_resource type="PackedScene" uid="uid://bg16xr4tytcjw" path="res://assets/Gym/Equipment/FBX/Sofa_2.fbx" id="13_dr0tc"]
+[ext_resource type="PackedScene" uid="uid://ba0px2nfclgur" path="res://assets/Gym/Equipment/FBX/Sofa_1.fbx" id="14_l0en8"]
+[ext_resource type="PackedScene" uid="uid://d2f1lx8fpadu1" path="res://assets/Gym/Equipment/FBX/Dumbbells_1.fbx" id="14_w8p8t"]
+[ext_resource type="PackedScene" uid="uid://2pkurkg43nqf" path="res://assets/Gym/Equipment/FBX/CTable_3.fbx" id="15_1a0em"]
+[ext_resource type="PackedScene" uid="uid://c24m6wdkn808i" path="res://assets/Gym/Equipment/FBX/Sofa_3.fbx" id="15_5h2g8"]
+[ext_resource type="PackedScene" uid="uid://c84m5hm86ipb3" path="res://assets/Gym/Equipment/FBX/Dumbbells_2.fbx" id="15_h36mb"]
+[ext_resource type="PackedScene" uid="uid://jh0nkeb267xe" path="res://assets/Gym/Equipment/FBX/CTable_3_Glass.fbx" id="16_ol7oc"]
+[ext_resource type="PackedScene" uid="uid://dsnbevgpirx6k" path="res://assets/Gym/Equipment/FBX/Mounted_TV.fbx" id="17_3x5vg"]
+[ext_resource type="PackedScene" uid="uid://blwkk50v13oll" path="res://assets/Gym/Equipment/FBX/Barbell_1.fbx" id="17_bx0xf"]
+[ext_resource type="PackedScene" uid="uid://cfbaqwmt4a2c6" path="res://assets/Gym/Equipment/FBX/Painting.fbx" id="18_25ouv"]
+[ext_resource type="PackedScene" uid="uid://b1h6g0l0xbeya" path="res://assets/Gym/Equipment/FBX/EzBar.fbx" id="18_k123i"]
+[ext_resource type="PackedScene" uid="uid://d1s1qfqa2c68c" path="res://assets/Gym/Equipment/FBX/Bench_A.fbx" id="19_hmnq7"]
+[ext_resource type="PackedScene" uid="uid://c4jt3gvwgnqo2" path="res://assets/Gym/Equipment/FBX/Bench_B.fbx" id="20_d1cco"]
+[ext_resource type="PackedScene" uid="uid://upgab53om5fr" path="res://assets/Gym/Equipment/FBX/E_Machine_1.fbx" id="21_hdhfh"]
+[ext_resource type="PackedScene" uid="uid://locy5c8r6w0c" path="res://assets/Gym/Equipment/FBX/E_Machine_Ac_1.fbx" id="22_aqq58"]
+[ext_resource type="PackedScene" uid="uid://dr7keq61ned0t" path="res://assets/Gym/Equipment/FBX/E_Machine_3.fbx" id="23_fn588"]
+[ext_resource type="PackedScene" uid="uid://cp2a5e0rk0pdh" path="res://assets/Gym/Equipment/FBX/Weight_D.fbx" id="23_qlyw6"]
+[ext_resource type="PackedScene" uid="uid://bkum7fuw6gtq6" path="res://assets/Gym/Equipment/FBX/Bench_C.fbx" id="24_xxmrs"]
+[ext_resource type="PackedScene" uid="uid://c3q58vl7l5ro7" path="res://assets/Gym/Equipment/FBX/Bench_D.fbx" id="25_0h2n2"]
+[ext_resource type="PackedScene" uid="uid://dgjnpx450bh3f" path="res://assets/Gym/Equipment/FBX/PullDown_Ac_1.fbx" id="25_l2kl7"]
+[ext_resource type="PackedScene" uid="uid://iqspq6i0xke6" path="res://assets/Gym/Equipment/FBX/E_Machine_4.fbx" id="26_uosw2"]
+[ext_resource type="PackedScene" uid="uid://e00k2d6qi5co" path="res://assets/Gym/Equipment/FBX/PullDown_Ac_2.fbx" id="27_1dpj2"]
+[ext_resource type="PackedScene" uid="uid://bx47gihrd1y61" path="res://assets/Gym/Equipment/FBX/E_Machine_5.fbx" id="27_igtvv"]
+[ext_resource type="PackedScene" uid="uid://cpyqmr0edvnv5" path="res://assets/Gym/Equipment/FBX/Weight_Bar_C.fbx" id="32_kshw5"]
+[ext_resource type="PackedScene" uid="uid://bm3h750vv31d5" path="res://assets/Gym/Equipment/FBX/Sm_Machine.fbx" id="32_l8m0q"]
+[ext_resource type="PackedScene" uid="uid://o3afig4lxum3" path="res://assets/Gym/Equipment/FBX/Pec_Machine_Ac_1.fbx" id="32_ln001"]
+[ext_resource type="PackedScene" uid="uid://r662glfkjqc6" path="res://assets/Gym/Equipment/FBX/PecDeck_Ac_2.fbx" id="33_856s6"]
+[ext_resource type="PackedScene" uid="uid://026hxc0dwhpe" path="res://assets/Gym/Equipment/FBX/Bench_Press.fbx" id="38_ykskq"]
+[ext_resource type="VoxelGIData" uid="uid://c0og1do46v6rn" path="res://scenes/other/Main.VoxelGI_data.res" id="59_fjeaq"]
+[ext_resource type="PackedScene" uid="uid://b2iw5wxbl43s7" path="res://assets/Gym/whiteboard/scene.gltf" id="60_6j5i8"]
+[ext_resource type="PackedScene" uid="uid://dvv0sif06rdg1" path="res://assets/Gym/niceday_whiteboard_marker/scene.gltf" id="61_knqf7"]
 [ext_resource type="FontFile" uid="uid://xllmi46s1prp" path="res://assets/Fonts/Itim-Regular.ttf" id="62_nddp4"]
-[ext_resource type="Texture2D" uid="uid://bsimqncoiru7p" path="res://assets/Textures/board/wasd.png" id="63_87bjg"]
-[ext_resource type="Texture2D" uid="uid://cs7jd1u364irf" path="res://assets/Textures/board/ekey.png" id="64_ciqqb"]
+[ext_resource type="Texture2D" uid="uid://bsimqncoiru7p" path="res://assets/Textures/icons/wasd.png" id="63_87bjg"]
+[ext_resource type="Script" path="res://scenes/exercises_board.gd" id="64_6ynpg"]
+[ext_resource type="Texture2D" uid="uid://cs7jd1u364irf" path="res://assets/Textures/icons/ekey.png" id="64_ciqqb"]
+[ext_resource type="Texture2D" uid="uid://dppqwwth3fqxp" path="res://assets/Textures/icons/poster1.jpg" id="66_kb34u"]
+[ext_resource type="Texture2D" uid="uid://ccjcr336yyp5u" path="res://assets/Textures/icons/poster2.png" id="67_mavv7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dedhp"]
 albedo_texture = ExtResource("5_5pxup")
@@ -126,7 +129,7 @@ surface_material_override/0 = ExtResource("2_skptw")
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_6j5mm")]
 
 [node name="Player" parent="." instance=ExtResource("1_g2tc4")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -11.9911, 0, -5.63436)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -11.99, 0, -5.634)
 
 [node name="UI" parent="Player" instance=ExtResource("6_dy26r")]
 
@@ -1178,6 +1181,7 @@ text = "Exercises
 "
 font = ExtResource("62_nddp4")
 outline_size = 0
+script = ExtResource("64_6ynpg")
 
 [node name="treadmill" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -4, -20.893, 0)
@@ -1190,14 +1194,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="tr_progress" type="Label3D" parent="Gym/Board/Exercises/treadmill"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 0)
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 32.4676, 0, 0)
 pixel_size = 0.2
 shaded = true
 modulate = Color(1, 0, 0, 1)
-text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-"
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%"
 font = ExtResource("62_nddp4")
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="bike" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -10.7607, -30.8934, 0)
@@ -1211,14 +1215,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="bike_progress" type="Label3D" parent="Gym/Board/Exercises/bike"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.7607, 0.000427246, 0)
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 39.2283, 0.000427246, 0)
 pixel_size = 0.2
 shaded = true
 modulate = Color(1, 0, 0, 1)
-text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-"
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%"
 font = ExtResource("62_nddp4")
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="benchpress" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -0.360931, -40.8935, 0)
@@ -1231,14 +1235,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="bench_progress" type="Label3D" parent="Gym/Board/Exercises/benchpress"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.361, 0.00050354, 0)
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 28.8286, 0.000473022, 0)
 pixel_size = 0.2
 shaded = true
 modulate = Color(1, 0, 0, 1)
-text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-"
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%"
 font = ExtResource("62_nddp4")
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="mat" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -11.4235, -50.8935, 0)
@@ -1251,14 +1255,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="mat_progress" type="Label3D" parent="Gym/Board/Exercises/mat"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.4236, 0.000457764, 0)
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 39.8912, 0.000457764, 0)
 pixel_size = 0.2
 shaded = true
 modulate = Color(1, 0, 0, 1)
-text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-"
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%"
 font = ExtResource("62_nddp4")
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="dumbells" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -3.96164, -60.8935, 0)
@@ -1271,14 +1275,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="dum_progress" type="Label3D" parent="Gym/Board/Exercises/dumbells"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9618, 0.00050354, 0)
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 32.4294, 0.00050354, 0)
 pixel_size = 0.2
 shaded = true
 modulate = Color(1, 0, 0, 1)
-text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-"
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%"
 font = ExtResource("62_nddp4")
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="backmachine" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, 2.05502, -70.8935, 0)
@@ -1292,14 +1296,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="back_progress" type="Label3D" parent="Gym/Board/Exercises/backmachine"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.9451, 0.000473022, 0)
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 26.4127, 0.000473022, 0)
 pixel_size = 0.2
 shaded = true
 modulate = Color(1, 0, 0, 1)
-text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-"
+text = "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%"
 font = ExtResource("62_nddp4")
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="note" type="Label3D" parent="Gym/Board/Exercises"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.075, -85.1647, 0)
@@ -1324,13 +1328,14 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="Text" type="Label3D" parent="Gym/Board/Help"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3309, -30, 0.00012207)
+transform = Transform3D(1, 0, -2.84217e-13, 0, 1, 0, 2.84217e-13, 0, 1, -24.331, -36.9727, 0.00012207)
 pixel_size = 0.2
 shaded = true
 texture_filter = 5
 modulate = Color(1, 0, 0, 1)
 text = "Exercise using the equipment in the gym 
 and progress through each category.
+Exercises get progressively harder!
 
 Don't forget to rest when you are fatigued!"
 font = ExtResource("62_nddp4")
@@ -1338,7 +1343,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="MovementKeys" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(20, 0, -2.27374e-12, 0, 20, 0, 2.27374e-12, 0, 20, -14.1415, -70, 0)
+transform = Transform3D(20, 0, -7.7307e-12, 0, 20, 0, 7.7307e-12, 0, 20, -14.1416, -74.7643, 0)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1356,7 +1361,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="InteractKey" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(15, 0, -1.7053e-12, 0, 15, 0, 1.7053e-12, 0, 15, 45.8584, -70, 0)
+transform = Transform3D(15, 0, -2.72848e-12, 0, 15, 0, 2.72848e-12, 0, 15, 45.8584, -74.7643, -0.000244141)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1374,9 +1379,21 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 horizontal_alignment = 0
 
+[node name="poster1" type="Sprite3D" parent="Gym"]
+transform = Transform3D(-1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, 14, 3, -2.9)
+shaded = true
+texture = ExtResource("66_kb34u")
+
+[node name="poster2" type="Sprite3D" parent="Gym"]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, -13.9, 3, 3.8)
+shaded = true
+texture = ExtResource("67_mavv7")
+
 [connection signal="body_entered" from="Gym/Walls/door/DoorArea" to="Player/UI" method="_on_door_entered"]
 [connection signal="body_exited" from="Gym/Walls/door/DoorArea" to="Player/UI" method="_on_door_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player" method="_on_treadmill_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player" method="_on_treadmill_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_exited"]
 [connection signal="body_entered" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_area_body_entered"]
 [connection signal="body_exited" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_exited"]

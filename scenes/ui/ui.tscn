@@ -1,0 +1,181 @@
+[gd_scene load_steps=12 format=3 uid="uid://dncrcyoh3dyx0"]
+
+[ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_7jkxl"]
+[ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_ur6vg"]
+[ext_resource type="Texture2D" uid="uid://nnkh1togsycx" path="res://assets/Textures/icons/ekey_2.png" id="2_ist8l"]
+[ext_resource type="Texture2D" uid="uid://b5bcqxnu3w722" path="res://assets/Textures/icons/esckey.png" id="3_g6ygg"]
+[ext_resource type="Texture2D" uid="uid://bpe0mqfsmr0hr" path="res://assets/Textures/icons/spacebar.png" id="4_pjpie"]
+[ext_resource type="Texture2D" uid="uid://c4cclhuvflf0d" path="res://assets/Textures/icons/info.png" id="5_bdao0"]
+[ext_resource type="Texture2D" uid="uid://ck1j8orwq13p1" path="res://assets/Textures/icons/strength.png" id="5_p3ped"]
+[ext_resource type="Texture2D" uid="uid://bi5r1x3e2keut" path="res://assets/Textures/icons/energy.png" id="6_2w36q"]
+
+[sub_resource type="Theme" id="Theme_tia8q"]
+default_font = ExtResource("1_ur6vg")
+default_font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3xii"]
+bg_color = Color(0.254902, 0.372549, 0.568627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcik4"]
+bg_color = Color(0.666667, 0.780392, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme = SubResource("Theme_tia8q")
+script = ExtResource("1_7jkxl")
+
+[node name="Fatigue" type="Label" parent="."]
+layout_mode = 1
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 117.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FatigueProgress" type="ProgressBar" parent="Fatigue"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 19.0
+offset_right = 219.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+theme_override_styles/background = SubResource("StyleBoxFlat_v3xii")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jcik4")
+
+[node name="FatigueIcon" type="Sprite2D" parent="Fatigue"]
+position = Vector2(39, 12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_2w36q")
+
+[node name="Power" type="Label" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 50.0
+offset_top = 100.0
+offset_right = 107.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+vertical_alignment = 1
+
+[node name="PowerProgress" type="ProgressBar" parent="Power"]
+layout_mode = 1
+offset_left = 86.0
+offset_right = 236.0
+offset_bottom = 23.0
+theme_override_constants/outline_size = 5
+theme_override_styles/background = SubResource("StyleBoxFlat_v3xii")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jcik4")
+show_percentage = false
+
+[node name="TreadmillExercise" type="Label" parent="Power"]
+layout_mode = 1
+offset_left = 86.0
+offset_top = 56.0
+offset_right = 513.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Keep pressing                  to maintain max power!"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Spacebar" type="Sprite2D" parent="Power/TreadmillExercise"]
+position = Vector2(171.5, 14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_pjpie")
+
+[node name="InfoIcon" type="Sprite2D" parent="Power/TreadmillExercise"]
+position = Vector2(-47, 13)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_bdao0")
+
+[node name="PowerIcon" type="Sprite2D" parent="Power"]
+position = Vector2(38, 12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_p3ped")
+
+[node name="Interact" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.5
+offset_top = -74.0
+offset_right = 59.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Placeholder"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="EKey" type="Sprite2D" parent="Interact"]
+position = Vector2(-44.5, 13)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ist8l")
+
+[node name="ExitExercise" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.5
+offset_top = -74.0
+offset_right = 59.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Exit exercise"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="EscKey" type="Sprite2D" parent="ExitExercise"]
+position = Vector2(-45, 13)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_g6ygg")
