@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://djuoxds0qsiic"]
 
-[ext_resource type="Texture2D" uid="uid://thqvgpo73cua" path="res://assets/Textures/icons/sky.png" id="1_2eyf4"]
+[ext_resource type="Texture2D" uid="uid://gksw6xk7l74q" path="res://assets/Textures/sky.png" id="1_etobr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_htpg2"]
-panorama = ExtResource("1_2eyf4")
+panorama = ExtResource("1_etobr")
 
 [sub_resource type="Sky" id="Sky_5j62h"]
 sky_material = SubResource("PanoramaSkyMaterial_htpg2")
@@ -23,5 +23,5 @@ sdfgi_y_scale = 0
 environment = SubResource("Environment_myihf")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 30.0995, 0)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 394.166, 1320.28)
 shadow_enabled = true
