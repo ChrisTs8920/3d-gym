@@ -35,8 +35,8 @@ const TREADMILL_TP_POS: Vector3 = Vector3(5.1, 0.5, 11) # Treadmill Position to 
 const TREADMILL_CAM_ROT: Vector3 = Vector3(0, 90, 0) # Camera rotation on interact
 
 @onready var camera: Camera3D = $Camera
-@onready var power_bar: ProgressBar = $UI/Power/PowerProgress
-@onready var fatigue_bar: ProgressBar = $UI/Fatigue/FatigueProgress
+@onready var power_bar: ProgressBar = $UI/UpperPanel/Power/PowerProgress
+@onready var fatigue_bar: ProgressBar = $UI/UpperPanel/Fatigue/FatigueProgress
 
 func _ready() -> void:
 	capture_mouse()
@@ -103,9 +103,11 @@ func _handle_interaction():
 	if treadmills_entered:
 		player_interacted = true
 		mouse_captured = false
-		$UI/Interact.hide()
-		$UI/ExitExercise.show()
-		$UI/Power.show()
+		# $UI/Panel2.size = Vector2(220, 55)
+		$UI/LowerPanel/Interact.hide()
+		$UI/LowerPanel/ExitExercise.show()
+		$UI/UpperPanel/Power.show()
+		$UI/UpperPanel.size = Vector2(520, 160)
 		camera.rotation_degrees = TREADMILL_CAM_ROT
 		position = TREADMILL_TP_POS
 
@@ -128,9 +130,10 @@ func _handle_exit():
 	if player_interacted:
 		player_interacted = false
 		mouse_captured = true
-		$UI/Interact.show()
-		$UI/ExitExercise.hide()
-		$UI/Power.hide()
+		$UI/LowerPanel/ExitExercise.hide()
+		$UI/LowerPanel/Interact.show()
+		$UI/UpperPanel/Power.hide()
+		$UI/UpperPanel.size = Vector2(280, 50)
 		power_bar.value = 0
 	else:
 		get_tree().quit()

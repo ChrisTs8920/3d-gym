@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dncrcyoh3dyx0"]
+[gd_scene load_steps=13 format=3 uid="uid://dncrcyoh3dyx0"]
 
 [ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_7jkxl"]
 [ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_ur6vg"]
@@ -12,6 +12,19 @@
 [sub_resource type="Theme" id="Theme_tia8q"]
 default_font = ExtResource("1_ur6vg")
 default_font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nkua"]
+bg_color = Color(0.067, 0.075, 0.094, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.886275, 0.886275, 0.913725, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3xii"]
 bg_color = Color(0.254902, 0.372549, 0.568627, 1)
@@ -50,19 +63,27 @@ mouse_filter = 2
 theme = SubResource("Theme_tia8q")
 script = ExtResource("1_7jkxl")
 
-[node name="Fatigue" type="Label" parent="."]
+[node name="UpperPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 36.0
+offset_right = 349.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nkua")
+
+[node name="Fatigue" type="Label" parent="UpperPanel"]
 layout_mode = 1
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 117.0
-offset_bottom = 74.0
+offset_left = -19.0
+offset_top = 14.0
+offset_right = 48.0
+offset_bottom = 38.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FatigueProgress" type="ProgressBar" parent="Fatigue"]
+[node name="FatigueProgress" type="ProgressBar" parent="UpperPanel/Fatigue"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -77,23 +98,23 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/background = SubResource("StyleBoxFlat_v3xii")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jcik4")
 
-[node name="FatigueIcon" type="Sprite2D" parent="Fatigue"]
-position = Vector2(39, 12)
+[node name="FatigueIcon" type="Sprite2D" parent="UpperPanel/Fatigue"]
+position = Vector2(47, 12)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("6_2w36q")
 
-[node name="Power" type="Label" parent="."]
+[node name="Power" type="Label" parent="UpperPanel"]
 visible = false
 layout_mode = 1
-offset_left = 50.0
-offset_top = 100.0
-offset_right = 107.0
-offset_bottom = 124.0
+offset_left = -19.0
+offset_top = 64.0
+offset_right = 38.0
+offset_bottom = 88.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 vertical_alignment = 1
 
-[node name="PowerProgress" type="ProgressBar" parent="Power"]
+[node name="PowerProgress" type="ProgressBar" parent="UpperPanel/Power"]
 layout_mode = 1
 offset_left = 86.0
 offset_right = 236.0
@@ -103,7 +124,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_v3xii")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jcik4")
 show_percentage = false
 
-[node name="TreadmillExercise" type="Label" parent="Power"]
+[node name="TreadmillExercise" type="Label" parent="UpperPanel/Power"]
 layout_mode = 1
 offset_left = 86.0
 offset_top = 56.0
@@ -115,22 +136,22 @@ text = "Keep pressing                  to maintain max power!"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Spacebar" type="Sprite2D" parent="Power/TreadmillExercise"]
+[node name="Spacebar" type="Sprite2D" parent="UpperPanel/Power/TreadmillExercise"]
 position = Vector2(171.5, 14)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_pjpie")
 
-[node name="InfoIcon" type="Sprite2D" parent="Power/TreadmillExercise"]
-position = Vector2(-47, 13)
+[node name="InfoIcon" type="Sprite2D" parent="UpperPanel/Power/TreadmillExercise"]
+position = Vector2(-39, 12)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_bdao0")
 
-[node name="PowerIcon" type="Sprite2D" parent="Power"]
-position = Vector2(38, 12)
+[node name="PowerIcon" type="Sprite2D" parent="UpperPanel/Power"]
+position = Vector2(47, 12)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_p3ped")
 
-[node name="Interact" type="Label" parent="."]
+[node name="LowerPanel" type="Panel" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -138,24 +159,40 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -59.5
-offset_top = -74.0
-offset_right = 59.5
+offset_left = -175.0
+offset_top = -105.0
+offset_right = 175.0
 offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nkua")
+
+[node name="Interact" type="Label" parent="LowerPanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.5
+offset_top = -41.0
+offset_right = 86.5
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
-text = "Placeholder"
+text = "Leave the gym and rest"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="EKey" type="Sprite2D" parent="Interact"]
+[node name="EKey" type="Sprite2D" parent="LowerPanel/Interact"]
 position = Vector2(-44.5, 13)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ist8l")
 
-[node name="ExitExercise" type="Label" parent="."]
+[node name="ExitExercise" type="Label" parent="LowerPanel"]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -163,10 +200,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -59.5
-offset_top = -74.0
-offset_right = 59.5
-offset_bottom = -50.0
+offset_left = -32.5
+offset_top = -41.0
+offset_right = 86.5
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -175,7 +212,7 @@ text = "Exit exercise"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="EscKey" type="Sprite2D" parent="ExitExercise"]
+[node name="EscKey" type="Sprite2D" parent="LowerPanel/ExitExercise"]
 position = Vector2(-45, 13)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_g6ygg")
