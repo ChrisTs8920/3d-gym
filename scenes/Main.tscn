@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=78 format=3 uid="uid://2r2xorepwlip"]
 
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
@@ -68,6 +68,8 @@
 [ext_resource type="Texture2D" uid="uid://ccjcr336yyp5u" path="res://assets/Textures/icons/poster2.png" id="67_mavv7"]
 [ext_resource type="PackedScene" uid="uid://nv7bmvr8ddp8" path="res://assets/World/ccity_building_set_1/scene.gltf" id="69_xwekq"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_6j3ab"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dedhp"]
 albedo_texture = ExtResource("5_5pxup")
 roughness_texture = ExtResource("6_8enqf")
@@ -111,6 +113,11 @@ size = Vector3(10, 1, 5)
 size = Vector3(3, 1, 8)
 
 [node name="World" type="Node3D"]
+
+[node name="helper" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 3.8)
+visible = false
+mesh = SubResource("BoxMesh_6j3ab")
 
 [node name="SecondaryLighting" type="VoxelGI" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -1405,7 +1412,9 @@ texture = ExtResource("67_mavv7")
 [connection signal="body_entered" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_entered"]
 [connection signal="body_exited" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player" method="_on_treadmill_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Bikes/BikeArea" to="Player" method="_on_bike_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_area_body_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Bikes/BikeArea" to="Player" method="_on_bike_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_exited"]
 [connection signal="body_entered" from="Gym/Equipment/Mats/MatArea" to="Player/UI" method="_on_mat_entered"]
 [connection signal="body_exited" from="Gym/Equipment/Mats/MatArea" to="Player/UI" method="_on_mat_exited"]
@@ -1413,5 +1422,7 @@ texture = ExtResource("67_mavv7")
 [connection signal="body_exited" from="Gym/Equipment/Dumbells/DumbellArea" to="Player/UI" method="_on_dumbell_exited"]
 [connection signal="body_entered" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player/UI" method="on_back_machines_entered"]
 [connection signal="body_exited" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player/UI" method="_on_back_machines_exited"]
+[connection signal="body_entered" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player" method="_on_benchpress_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_entered"]
+[connection signal="body_exited" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player" method="_on_benchpress_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_exited"]

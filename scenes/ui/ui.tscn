@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dncrcyoh3dyx0"]
+[gd_scene load_steps=14 format=3 uid="uid://dncrcyoh3dyx0"]
 
 [ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_7jkxl"]
 [ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_ur6vg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c4cclhuvflf0d" path="res://assets/Textures/icons/info.png" id="5_bdao0"]
 [ext_resource type="Texture2D" uid="uid://ck1j8orwq13p1" path="res://assets/Textures/icons/strength.png" id="5_p3ped"]
 [ext_resource type="Texture2D" uid="uid://bi5r1x3e2keut" path="res://assets/Textures/icons/energy.png" id="6_2w36q"]
+[ext_resource type="Texture2D" uid="uid://devl86sistqk0" path="res://assets/Textures/icons/qkey.png" id="8_8en6j"]
 
 [sub_resource type="Theme" id="Theme_tia8q"]
 default_font = ExtResource("1_ur6vg")
@@ -124,32 +125,61 @@ theme_override_styles/background = SubResource("StyleBoxFlat_v3xii")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jcik4")
 show_percentage = false
 
-[node name="TreadmillExercise" type="Label" parent="UpperPanel/Power"]
+[node name="PowerIcon" type="Sprite2D" parent="UpperPanel/Power/PowerProgress"]
+position = Vector2(-39, 12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_p3ped")
+
+[node name="Minigame1_label" type="Label" parent="UpperPanel/Power"]
+visible = false
 layout_mode = 1
 offset_left = 86.0
-offset_top = 56.0
+offset_top = 52.0
 offset_right = 513.0
-offset_bottom = 80.0
+offset_bottom = 76.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 text = "Keep pressing                  to maintain max power!"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Spacebar" type="Sprite2D" parent="UpperPanel/Power/TreadmillExercise"]
+[node name="Spacebar" type="Sprite2D" parent="UpperPanel/Power/Minigame1_label"]
 position = Vector2(171.5, 14)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_pjpie")
 
-[node name="InfoIcon" type="Sprite2D" parent="UpperPanel/Power/TreadmillExercise"]
+[node name="InfoIcon" type="Sprite2D" parent="UpperPanel/Power/Minigame1_label"]
 position = Vector2(-39, 12)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_bdao0")
 
-[node name="PowerIcon" type="Sprite2D" parent="UpperPanel/Power"]
-position = Vector2(47, 12)
+[node name="Minigame2_label" type="Label" parent="UpperPanel/Power"]
+visible = false
+layout_mode = 1
+offset_left = 86.0
+offset_top = 52.0
+offset_right = 530.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Fill the power bar with                 to complete a rep!"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="qkey" type="Sprite2D" parent="UpperPanel/Power/Minigame2_label"]
+position = Vector2(219, 12)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("5_p3ped")
+texture = ExtResource("8_8en6j")
+
+[node name="ekey" type="Sprite2D" parent="UpperPanel/Power/Minigame2_label"]
+position = Vector2(257, 12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ist8l")
+
+[node name="InfoIcon" type="Sprite2D" parent="UpperPanel/Power/Minigame2_label"]
+position = Vector2(-39, 12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_bdao0")
 
 [node name="LowerPanel" type="Panel" parent="."]
 visible = false
