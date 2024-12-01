@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rhyzome Plant
+* source:	https://sketchfab.com/3d-models/rhyzome-plant-7191a1b935ac452987866573713e4da5
+* author:	Blizzy (https://sketchfab.com/jeffbas)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rhyzome Plant" (https://sketchfab.com/3d-models/rhyzome-plant-7191a1b935ac452987866573713e4da5) by Blizzy (https://sketchfab.com/jeffbas) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

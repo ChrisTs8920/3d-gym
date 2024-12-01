@@ -46,6 +46,11 @@ const BENCH_CAM_ROT: Vector3 = Vector3(90, 180, 0)
 var next_key_minigame: String = "q_minigame" # Initial key is 'q'
 # var reps: int = 0
 
+# Dumbells
+var dumbells_entered: bool = false
+const DUMBELLS_TP_POS: Vector3 = Vector3(8.6, 0.5, 1.1)
+const DUMBELLS_CAM_ROT: Vector3 = Vector3(-30, 174, 0)
+
 @onready var camera: Camera3D = $Camera
 @onready var power_bar: ProgressBar = $UI/UpperPanel/Power/PowerProgress
 @onready var fatigue_bar: ProgressBar = $UI/UpperPanel/Fatigue/FatigueProgress
@@ -75,7 +80,7 @@ func decay_power_bar():
 	if treadmills_entered or bikes_entered:
 		power_bar.value -= POWER_BAR_DECAY
 	# Decay for minigame 2
-	if bench_press_entered:
+	if bench_press_entered or dumbells_entered:
 		if power_bar.value == 100:
 			next_key_minigame = "helper_minigame" # Does not allow the player to interact - Rep completed
 		if power_bar.value == 0:
@@ -133,6 +138,8 @@ func _handle_interaction():
 		_interaction_logic(BIKE_CAM_ROT, BIKE_TP_POS, minigame_1_label)
 	if bench_press_entered:
 		_interaction_logic(BENCH_CAM_ROT, BENCH_TP_POS, minigame_2_label)
+	if dumbells_entered:
+		_interaction_logic(DUMBELLS_CAM_ROT, DUMBELLS_TP_POS, minigame_2_label)
 
 func _interaction_logic(cam_rotation, tp_pos, info_label):
 	player_interacted = true
@@ -148,7 +155,10 @@ func _interaction_logic(cam_rotation, tp_pos, info_label):
 func _handle_minigame_1():
 	if player_interacted and (treadmills_entered or bikes_entered):
 		if fatigue_bar.value < 100: # If player not fatigued
-			power_bar.value += POWER_BAR_STEP - Globals.treadmill_progress / 2 # progressively harder
+			if treadmills_entered:
+				power_bar.value += POWER_BAR_STEP - Globals.treadmill_progress / 2  # progressively harder
+			elif bikes_entered:
+				power_bar.value += POWER_BAR_STEP - Globals.bike_progress / 2
 			fatigue_bar.value += FATIGUE_BAR_STEP
 			if power_bar.value > 90: # If player almost maxed out power bar, progress category
 				_handle_progression()
@@ -156,9 +166,12 @@ func _handle_minigame_1():
 			_handle_exit()
 
 func _handle_minigame_2():
-	if player_interacted and bench_press_entered:
+	if player_interacted and (bench_press_entered or dumbells_entered):
 		if fatigue_bar.value < 100: # If player not fatigued
-			power_bar.value += POWER_BAR_STEP - Globals.bench_press_progress / 2 # progressively harder
+			if bench_press_entered:
+				power_bar.value += POWER_BAR_STEP - Globals.bench_press_progress / 2 # progressively harder
+			elif dumbells_entered:
+				power_bar.value += POWER_BAR_STEP - Globals.dumbells_progress / 2
 			fatigue_bar.value += FATIGUE_BAR_STEP
 			# Count reps
 			if power_bar.value == 100:
@@ -183,7 +196,10 @@ func _handle_progression():
 		Globals.bike_progress = clamp(Globals.bike_progress, 0, 10)
 	if bench_press_entered:
 		Globals.bench_press_progress += PROGRESS_STEP * 10 # Progress by 0.1 every rep
-		Globals.bike_progress = clamp(Globals.bike_progress, 0, 10)
+		Globals.bench_press_progress = clamp(Globals.bench_press_progress, 0, 10)
+	if dumbells_entered:
+		Globals.dumbells_progress += PROGRESS_STEP * 10 # Progress by 0.1 every rep
+		Globals.dumbells_progress = clamp(Globals.dumbells_progress, 0, 10)
 
 func _handle_jump():
 	if !player_interacted:
@@ -222,3 +238,10 @@ func _on_benchpress_area_body_entered(body: Node3D) -> void:
 
 func _on_benchpress_area_body_exited(body: Node3D) -> void:
 	bench_press_entered = false
+
+
+func _on_dumbell_area_body_entered(body: Node3D) -> void:
+	dumbells_entered = true
+
+func _on_dumbell_area_body_exited(body: Node3D) -> void:
+	dumbells_entered = false
