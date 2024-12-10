@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dncrcyoh3dyx0"]
+[gd_scene load_steps=18 format=3 uid="uid://dncrcyoh3dyx0"]
 
 [ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_7jkxl"]
 [ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_ur6vg"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://ck1j8orwq13p1" path="res://assets/Textures/icons/strength.png" id="5_p3ped"]
 [ext_resource type="Texture2D" uid="uid://bi5r1x3e2keut" path="res://assets/Textures/icons/energy.png" id="6_2w36q"]
 [ext_resource type="Texture2D" uid="uid://devl86sistqk0" path="res://assets/Textures/icons/qkey.png" id="8_8en6j"]
+[ext_resource type="Texture2D" uid="uid://cdk2a6urj0rln" path="res://assets/Textures/icons/wkey.png" id="9_lptkm"]
+[ext_resource type="Texture2D" uid="uid://crucm23a880ks" path="res://assets/Textures/icons/akey.png" id="10_aq6tk"]
+[ext_resource type="Texture2D" uid="uid://0yiy681e1axn" path="res://assets/Textures/icons/skey.png" id="11_b2mw1"]
+[ext_resource type="Texture2D" uid="uid://drj4laklx1yi3" path="res://assets/Textures/icons/dkey.png" id="12_0kgot"]
 
 [sub_resource type="Theme" id="Theme_tia8q"]
 default_font = ExtResource("1_ur6vg")
@@ -140,7 +144,6 @@ offset_bottom = 76.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 text = "Keep pressing                  to maintain max power!"
-horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Spacebar" type="Sprite2D" parent="UpperPanel/Power/Minigame1_label"]
@@ -163,7 +166,6 @@ offset_bottom = 76.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 text = "Fill the power bar with                 to complete a rep!"
-horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="qkey" type="Sprite2D" parent="UpperPanel/Power/Minigame2_label"]
@@ -181,6 +183,57 @@ position = Vector2(-39, 12)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_bdao0")
 
+[node name="Minigame3_label" type="Label" parent="UpperPanel/Power"]
+visible = false
+layout_mode = 1
+offset_left = 86.0
+offset_top = 52.0
+offset_right = 530.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "Press the correct key and maintain max power!"
+vertical_alignment = 1
+
+[node name="InfoIcon" type="Sprite2D" parent="UpperPanel/Power/Minigame3_label"]
+position = Vector2(-39, 12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_bdao0")
+
+[node name="MiddlePanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 70.0
+offset_top = 210.0
+offset_right = 250.0
+offset_bottom = 330.0
+pivot_offset = Vector2(90, 60)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nkua")
+
+[node name="wkey" type="Sprite2D" parent="MiddlePanel"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(89, 30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_lptkm")
+
+[node name="akey" type="Sprite2D" parent="MiddlePanel"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(32, 86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_aq6tk")
+
+[node name="skey" type="Sprite2D" parent="MiddlePanel"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(88, 86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_b2mw1")
+
+[node name="dkey" type="Sprite2D" parent="MiddlePanel"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(146, 87)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_0kgot")
+
 [node name="LowerPanel" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -195,6 +248,7 @@ offset_right = 175.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset = Vector2(175, 27.5)
 theme_override_styles/panel = SubResource("StyleBoxFlat_0nkua")
 
 [node name="Interact" type="Label" parent="LowerPanel"]

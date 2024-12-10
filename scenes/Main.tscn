@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=98 format=3 uid="uid://2r2xorepwlip"]
 
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bap1go14tjxpa" path="res://assets/World/Gym/Equipment/FBX/Plant_Deco.fbx" id="12_ye7yc"]
 [ext_resource type="PackedScene" uid="uid://b6412ycj50oct" path="res://assets/World/Gym/Equipment/FBX/Weight_B.fbx" id="13_3a3nu"]
 [ext_resource type="PackedScene" uid="uid://bg16xr4tytcjw" path="res://assets/World/Gym/Equipment/FBX/Sofa_2.fbx" id="13_dr0tc"]
+[ext_resource type="PackedScene" uid="uid://b8y0jdbccxs0f" path="res://assets/World/Gym/clock/scene.gltf" id="14_j7a0a"]
 [ext_resource type="PackedScene" uid="uid://ba0px2nfclgur" path="res://assets/World/Gym/Equipment/FBX/Sofa_1.fbx" id="14_l0en8"]
 [ext_resource type="PackedScene" uid="uid://d2f1lx8fpadu1" path="res://assets/World/Gym/Equipment/FBX/Dumbbells_1.fbx" id="14_w8p8t"]
 [ext_resource type="PackedScene" uid="uid://2pkurkg43nqf" path="res://assets/World/Gym/Equipment/FBX/CTable_3.fbx" id="15_1a0em"]
@@ -152,7 +153,7 @@ size = Vector3(3, 0.01, 8)
 [node name="World" type="Node3D"]
 
 [node name="helper" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.64137, 1.1, 1.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.6, 2.6)
 visible = false
 mesh = SubResource("BoxMesh_6j3ab")
 
@@ -246,6 +247,9 @@ visible = false
 
 [node name="wall4" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0, 3, -14.5)
+
+[node name="Sketchfab_Scene" parent="Gym/Walls/wall4" instance=ExtResource("14_j7a0a")]
+transform = Transform3D(-1.54974e-08, 0.15, 1.03027e-15, -2.38398e-09, -8.88178e-16, -0.15, -0.15, -1.54974e-08, 2.38398e-09, 0.5, 1.3, -0.5)
 
 [node name="ceiling" parent="Gym/Walls" instance=ExtResource("5_vdm7y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.85986, 0)
@@ -1517,7 +1521,7 @@ shaded = true
 texture = ExtResource("67_mavv7")
 
 [node name="poster3" type="Sprite3D" parent="Gym"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 7.6, 3, -13.9966)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.6, 3, -13.9966)
 shaded = true
 texture = ExtResource("68_2sca3")
 
@@ -1531,13 +1535,17 @@ texture = ExtResource("68_2sca3")
 [connection signal="body_entered" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_area_body_entered"]
 [connection signal="body_exited" from="Gym/Equipment/Bikes/BikeArea" to="Player" method="_on_bike_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/Bikes/BikeArea" to="Player/UI" method="_on_bike_exited"]
+[connection signal="body_entered" from="Gym/Equipment/Mats/MatArea" to="Player" method="_on_mat_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/Mats/MatArea" to="Player/UI" method="_on_mat_entered"]
+[connection signal="body_exited" from="Gym/Equipment/Mats/MatArea" to="Player" method="_on_mat_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/Mats/MatArea" to="Player/UI" method="_on_mat_exited"]
 [connection signal="body_entered" from="Gym/Equipment/Dumbells/DumbellArea" to="Player" method="_on_dumbell_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/Dumbells/DumbellArea" to="Player/UI" method="_on_dumbell_entered"]
 [connection signal="body_exited" from="Gym/Equipment/Dumbells/DumbellArea" to="Player" method="_on_dumbell_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/Dumbells/DumbellArea" to="Player/UI" method="_on_dumbell_exited"]
+[connection signal="body_entered" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player" method="_on_back_machines_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player/UI" method="on_back_machines_entered"]
+[connection signal="body_exited" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player" method="_on_back_machines_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/BackMachines/BackMachinesArea" to="Player/UI" method="_on_back_machines_exited"]
 [connection signal="body_entered" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player" method="_on_benchpress_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_entered"]

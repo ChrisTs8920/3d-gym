@@ -1,0 +1,8 @@
+Model Information:
+* title:	Clock
+* source:	https://sketchfab.com/3d-models/clock-cd0e6a816e6942b587846dd1e866d59e
+* author:	hitheredearjohn (https://sketchfab.com/hitheredearjohn)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
