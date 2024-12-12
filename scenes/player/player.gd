@@ -24,7 +24,7 @@ var jump_vel: Vector3 # Jumping velocity
 const POWER_BAR_STEP: int = 12
 const POWER_BAR_DECAY: float = 0.2
 const FATIGUE_BAR_STEP: float = 0.1
-const PROGRESS_STEP: float = 0.01
+const PROGRESS_STEP: float = 0.02
 
 var player_interacted: bool = false # Detects if player interacted with any equipment
 
@@ -64,6 +64,10 @@ var back_machines_entered: bool = false
 const BACK_TP_POS: Vector3 = Vector3(-2.5, 0.5, 2.6)
 const BACK_CAM_ROT: Vector3 = Vector3(0, 90, 0)
 
+# Door Interaction
+var door_entered: bool = false
+
+
 @onready var camera: Camera3D = $Camera
 @onready var power_bar: ProgressBar = $UI/UpperPanel/Power/PowerProgress
 @onready var fatigue_bar: ProgressBar = $UI/UpperPanel/Fatigue/FatigueProgress
@@ -97,6 +101,9 @@ func _process(delta: float) -> void:
 	# Decay of progress bar - minigame mechanic
 	if player_interacted:
 		decay_power_bar()
+	
+	if !$UI/Fade/AnimationPlayer.is_playing() and !player_interacted:
+		$UI/Fade.hide()
 	
 	if mats_entered or back_machines_entered:
 		if next_key == 0:
@@ -145,9 +152,9 @@ func capture_mouse() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_captured = true
 
-#func release_mouse() -> void:
-	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	#mouse_captured = false
+func release_mouse() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	mouse_captured = false
 
 func _rotate_camera(sens_mod: float = 1.0) -> void:
 	camera.rotation.y -= look_dir.x * camera_sens * sens_mod
@@ -192,6 +199,12 @@ func _handle_interaction():
 		_interaction_logic(MATS_CAM_ROT, MATS_TP_POS, minigame_3_label)
 	if back_machines_entered:
 		_interaction_logic(BACK_CAM_ROT, BACK_TP_POS, minigame_3_label)
+	if door_entered: # Rest
+		$UI/Fade.show()
+		$UI/Fade/AnimationPlayer.play("fade_in")
+		$UI/Fade/AnimationPlayer.queue("fade_out")
+		# if $UI/Fade/AnimationPlayer.current_animation == "fade_out":
+		fatigue_bar.value = 0
 
 func _interaction_logic(cam_rotation, tp_pos, info_label):
 	player_interacted = true
@@ -304,7 +317,7 @@ func _handle_jump():
 		jumping = true
 
 func _handle_exit():
-	if player_interacted:
+	if player_interacted: # If player interacted, exit exercise
 		player_interacted = false
 		mouse_captured = true
 		$UI/LowerPanel/ExitExercise.hide()
@@ -316,8 +329,11 @@ func _handle_exit():
 		minigame_3_label.hide()
 		$UI/UpperPanel.size = Vector2(280, 50)
 		power_bar.value = 0
-	else:
-		get_tree().quit()
+	else: # else, pause game
+		get_tree().paused = true
+		$UI.hide()
+		$Pause_menu.show()
+		release_mouse()
 
 func _on_treadmill_area_body_entered(body: Node3D) -> void:
 	treadmills_entered = true
@@ -359,3 +375,10 @@ func _on_back_machines_area_body_entered(body: Node3D) -> void:
 
 func _on_back_machines_area_body_exited(body: Node3D) -> void:
 	back_machines_entered = false
+
+
+func _on_door_area_body_entered(body: Node3D) -> void:
+	door_entered = true
+
+func _on_door_area_body_exited(body: Node3D) -> void:
+	door_entered = false

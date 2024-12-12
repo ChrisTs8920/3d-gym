@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=102 format=3 uid="uid://2r2xorepwlip"]
 
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://8i8upkiygdeo" path="res://assets/World/Gym/glass_window/scene.gltf" id="5_cc8ki"]
 [ext_resource type="PackedScene" uid="uid://xlqmwb43hp4v" path="res://scenes/environment/ceiling.tscn" id="5_vdm7y"]
 [ext_resource type="PackedScene" uid="uid://br4ok3f26bq3s" path="res://assets/World/Gym/door_with_frame/scene.gltf" id="6_1lp3k"]
+[ext_resource type="PackedScene" uid="uid://crr3skqimjjr8" path="res://scenes/ui/pause_menu.tscn" id="6_2aovo"]
 [ext_resource type="PackedScene" uid="uid://c07rrao6iy5nq" path="res://assets/World/Gym/Equipment/FBX/Treadmill_1_Main.fbx" id="6_2xra4"]
 [ext_resource type="Texture2D" uid="uid://bsjpbxfokteth" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Roughness.jpg" id="6_8enqf"]
 [ext_resource type="Texture2D" uid="uid://qpivytj80c3k" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Displacement.jpg" id="6_chwiy"]
@@ -81,6 +82,9 @@
 [ext_resource type="Texture2D" uid="uid://cwbtkta6s38fc" path="res://assets/World/Gym/poster3.png" id="68_2sca3"]
 [ext_resource type="PackedScene" uid="uid://nv7bmvr8ddp8" path="res://assets/World/ccity_building_set_1/scene.gltf" id="69_xwekq"]
 [ext_resource type="Material" uid="uid://b0etby7hatsd1" path="res://assets/Materials/carpet.tres" id="73_n24vg"]
+[ext_resource type="Texture2D" uid="uid://cb8jsa6kq6qkt" path="res://assets/Textures/icons/esc_key2.png" id="80_458vm"]
+[ext_resource type="PackedScene" uid="uid://b4yywr04obmej" path="res://scenes/characters/sophie_character.tscn" id="82_2exti"]
+[ext_resource type="PackedScene" uid="uid://gro0ioaipn25" path="res://scenes/characters/adam_character.tscn" id="83_ryo7a"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6j3ab"]
 
@@ -151,6 +155,7 @@ material = ExtResource("52_2ajb0")
 size = Vector3(3, 0.01, 8)
 
 [node name="World" type="Node3D"]
+process_mode = 1
 
 [node name="helper" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.6, 2.6)
@@ -187,6 +192,8 @@ spot_range = 40.0
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -11.99, 0, -5.634)
 
 [node name="UI" parent="Player" instance=ExtResource("6_dy26r")]
+
+[node name="Pause_menu" parent="Player" instance=ExtResource("6_2aovo")]
 
 [node name="Gym" type="Node3D" parent="."]
 
@@ -1356,7 +1363,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="benchpress" type="Label3D" parent="Gym/Board/Exercises"]
-transform = Transform3D(1, 0, 1.24345e-14, 0, 1, 0, -1.24345e-14, 0, 1, -0.360931, -40.8935, 0)
+transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, -0.360931, -40.8935, 0)
 pixel_size = 0.2
 shaded = true
 texture_filter = 5
@@ -1459,22 +1466,24 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="Text" type="Label3D" parent="Gym/Board/Help"]
-transform = Transform3D(1, 0, -2.84217e-13, 0, 1, 0, 2.84217e-13, 0, 1, -24.331, -36.9727, 0.00012207)
+transform = Transform3D(1, 0, -3.69482e-13, 0, 1, 0, 3.69482e-13, 0, 1, -24.331, -43.7866, 0.00012207)
 pixel_size = 0.2
 shaded = true
 texture_filter = 5
 modulate = Color(1, 0, 0, 1)
 text = "Exercise using the equipment in the gym 
 and progress through each category.
-Exercises get progressively harder!
 
-Don't forget to rest when you are fatigued!"
+Also:
+- Check the pause menu for optional objectives!
+- Exercises get progressively harder!
+- Don't forget to rest when you are fatigued!"
 font = ExtResource("62_nddp4")
 outline_size = 0
 horizontal_alignment = 0
 
 [node name="MovementKeys" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(20, 0, -7.7307e-12, 0, 20, 0, 7.7307e-12, 0, 20, -14.1416, -74.7643, 0)
+transform = Transform3D(20, 0, -1.00044e-11, 0, 20, 0, 1.00044e-11, 0, 20, -14.1416, -81.5782, 0)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1492,7 +1501,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="InteractKey" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(15, 0, -2.72848e-12, 0, 15, 0, 2.72848e-12, 0, 15, 45.8584, -74.7643, -0.000244141)
+transform = Transform3D(15, 0, -3.18323e-12, 0, 15, 0, 3.18323e-12, 0, 15, 45.8584, -81.5782, -0.000244141)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1505,6 +1514,25 @@ shaded = true
 texture_filter = 5
 modulate = Color(1, 0, 0, 1)
 text = "Interact
+"
+font = ExtResource("62_nddp4")
+outline_size = 0
+horizontal_alignment = 0
+
+[node name="EscapeKey" type="Sprite3D" parent="Gym/Board/Help"]
+transform = Transform3D(15, 0, -3.18323e-12, 0, 15, 0, 3.18323e-12, 0, 15, 25.8584, -101.578, -0.000244141)
+cast_shadow = 0
+shaded = true
+texture_filter = 5
+texture = ExtResource("80_458vm")
+
+[node name="EscapeText" type="Label3D" parent="Gym/Board/Help/EscapeKey"]
+transform = Transform3D(0.0666667, 0, 7.10543e-15, 0, 0.0666667, 0, -7.10543e-15, 0, 0.0666667, 1.0446, -2.86102e-06, -7.62939e-06)
+pixel_size = 0.2
+shaded = true
+texture_filter = 5
+modulate = Color(1, 0, 0, 1)
+text = "Pause
 "
 font = ExtResource("62_nddp4")
 outline_size = 0
@@ -1525,7 +1553,15 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.6, 3, -13.9966)
 shaded = true
 texture = ExtResource("68_2sca3")
 
+[node name="sophie_character" parent="Gym" instance=ExtResource("82_2exti")]
+transform = Transform3D(0.46488, 0, 0.996939, 0, 1.1, 0, -0.996939, 0, 0.46488, -13.5, 0.536279, -11.7)
+
+[node name="adam_character" parent="Gym" instance=ExtResource("83_ryo7a")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -5.6, 0.5, -13.5)
+
+[connection signal="body_entered" from="Gym/Walls/door/DoorArea" to="Player" method="_on_door_area_body_entered"]
 [connection signal="body_entered" from="Gym/Walls/door/DoorArea" to="Player/UI" method="_on_door_entered"]
+[connection signal="body_exited" from="Gym/Walls/door/DoorArea" to="Player" method="_on_door_area_body_exited"]
 [connection signal="body_exited" from="Gym/Walls/door/DoorArea" to="Player/UI" method="_on_door_exited"]
 [connection signal="body_entered" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player" method="_on_treadmill_area_body_entered"]
 [connection signal="body_entered" from="Gym/Equipment/Treadmills/TreadmillArea" to="Player/UI" method="_on_treadmills_entered"]

@@ -1,0 +1,162 @@
+[gd_scene load_steps=9 format=3 uid="uid://crr3skqimjjr8"]
+
+[ext_resource type="Shader" path="res://scenes/ui/blur_pause.gdshader" id="1_3iqgf"]
+[ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_gx3mo"]
+[ext_resource type="Script" path="res://scenes/ui/pause_menu.gd" id="2_km423"]
+[ext_resource type="Texture2D" uid="uid://cm0jt7jdcx1wj" path="res://icon.svg" id="2_ypspl"]
+
+[sub_resource type="Theme" id="Theme_uqc1j"]
+default_font = ExtResource("1_gx3mo")
+default_font_size = 32
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4fxei"]
+shader = ExtResource("1_3iqgf")
+shader_parameter/lod = 5.0
+shader_parameter/mix_percentage = 0.3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqtry"]
+bg_color = Color(0.0666667, 0.0745098, 0.0941176, 0.701961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.886275, 0.886275, 0.913725, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxd2k"]
+bg_color = Color(0.0666667, 0.0745098, 0.0941176, 0.701961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.886275, 0.886275, 0.913725, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Pause_menu" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uqc1j")
+script = ExtResource("2_km423")
+
+[node name="blur_effect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_4fxei")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ypspl")
+expand_mode = 1
+
+[node name="pause_label" type="Label" parent="blur_effect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -421.0
+offset_top = -99.0
+offset_right = -213.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Paused.
+"
+
+[node name="resume_button" type="Button" parent="blur_effect/pause_label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 47.0
+offset_right = 32.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_lqtry")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxd2k")
+text = " Resume "
+
+[node name="exit_button" type="Button" parent="blur_effect/pause_label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 119.0
+offset_right = -31.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_lqtry")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxd2k")
+text = " Exit "
+
+[node name="objectives_opt" type="Label" parent="blur_effect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 152.0
+offset_top = -99.0
+offset_right = 439.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Optional Objectives:"
+
+[node name="reach50_any" type="Label" parent="blur_effect/objectives_opt"]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 396.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 24
+text = "1. Reach 50% on any exercise"
+
+[node name="count" type="Label" parent="blur_effect/objectives_opt/reach50_any"]
+layout_mode = 0
+offset_left = 346.0
+offset_right = 411.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 24
+text = "0 / 1"
+
+[node name="reach100_all" type="Label" parent="blur_effect/objectives_opt"]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 414.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 24
+text = "2. Reach 100% on all exercises"
+
+[node name="count" type="Label" parent="blur_effect/objectives_opt/reach100_all"]
+layout_mode = 0
+offset_left = 346.0
+offset_right = 411.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 24
+text = "0 / 6"
+
+[connection signal="pressed" from="blur_effect/pause_label/resume_button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="blur_effect/pause_label/exit_button" to="." method="_on_exit_button_pressed"]
