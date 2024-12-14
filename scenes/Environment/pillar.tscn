@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqdi5w5i0gp5h"]
+
+[ext_resource type="Material" uid="uid://byhg7ahxlu5tb" path="res://assets/Materials/pillar.tres" id="1_88jlc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cdm7a"]
+size = Vector3(1, 5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w7ytn"]
+material = ExtResource("1_88jlc")
+size = Vector3(1, 5, 1)
+
+[node name="pillar" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_cdm7a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_w7ytn")

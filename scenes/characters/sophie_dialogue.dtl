@@ -1,0 +1,38 @@
+set {rand_choice} = range(0,10).pick_random()
+sophie_nutritionist: Hey! What can i do for you?
+- Can i see what you have for sale?
+	[signal arg="on_quit"]
+- I would like some dietary advice.
+	sophie_nutritionist: Sure!
+	if {rand_choice} == 0:
+		sophie_nutritionist: Don't forget to stay hydrated throughout the day - it's essential for energy, focus, and overall health.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 1:
+		sophie_nutritionist: A balanced diet includes vegetables, protein, whole grains, and healthy fats. Variety keeps meals exciting and nutritious.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 2:
+		sophie_nutritionist: Eating the right amount for your body helps maintain energy without overloading. Listen to your hunger cues.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 3:
+		sophie_nutritionist: Whenever possible, choose fresh, whole foods over processed ones for more nutrients and fewer additives.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 4:
+		sophie_nutritionist: It's perfectly fine to enjoy your favorite treats. Just remember: Everything in modetation.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 5:
+		sophie_nutritionist: Every little change counts. Start with one healthy habit, and you'll build momentum!
+		[signal arg="on_quit"]
+	elif {rand_choice} == 6:
+		sophie_nutritionist: Feeling hungry between meals? Reach for nuts, seeds, or a piece of fruit instead of sugary snacks.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 7:
+		sophie_nutritionist: Did you know the color of your plate can influence how much you eat? Brighter plates often make food look more appealing.
+		[signal arg="on_quit"]
+	elif {rand_choice} == 8:
+		sophie_nutritionist: Breakfast is your chance to start the day on a strong note. Why not try avocado toast or a smoothie bowl?
+		[signal arg="on_quit"]
+	elif {rand_choice} == 9:
+		sophie_nutritionist: After a tough workout, your muscles need repair. Reach for lean protein like chicken, eggs, or tofu.
+		[signal arg="on_quit"]
+- Nothing! have a nice day.
+[signal arg="on_quit"]

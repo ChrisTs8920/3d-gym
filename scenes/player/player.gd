@@ -67,16 +67,29 @@ const BACK_CAM_ROT: Vector3 = Vector3(0, 90, 0)
 # Door Interaction
 var door_entered: bool = false
 
+var in_dialogue: bool = false
+
 
 @onready var camera: Camera3D = $Camera
+
 @onready var power_bar: ProgressBar = $UI/UpperPanel/Power/PowerProgress
 @onready var fatigue_bar: ProgressBar = $UI/UpperPanel/Fatigue/FatigueProgress
+
 @onready var minigame_1_label: Label = $UI/UpperPanel/Power/Minigame1_label
 @onready var minigame_2_label: Label = $UI/UpperPanel/Power/Minigame2_label
 @onready var minigame_3_label: Label = $UI/UpperPanel/Power/Minigame3_label
 
+@onready var wkey: Sprite2D = $UI/MiddlePanel/wkey
+@onready var akey: Sprite2D = $UI/MiddlePanel/akey
+@onready var skey: Sprite2D = $UI/MiddlePanel/skey
+@onready var dkey: Sprite2D = $UI/MiddlePanel/dkey
+
+@onready var fade: ColorRect = $UI/Fade
+@onready var animation_player: AnimationPlayer = $UI/Fade/AnimationPlayer
+
 func _ready() -> void:
 	capture_mouse()
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -102,30 +115,31 @@ func _process(delta: float) -> void:
 	if player_interacted:
 		decay_power_bar()
 	
-	if !$UI/Fade/AnimationPlayer.is_playing() and !player_interacted:
-		$UI/Fade.hide()
+	if !animation_player.is_playing() and !player_interacted:
+		fade.hide()
 	
+	# Highlight next key on UI
 	if mats_entered or back_machines_entered:
 		if next_key == 0:
-			$UI/MiddlePanel/wkey.modulate = Color(1, 1, 1, 1)
-			$UI/MiddlePanel/akey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/skey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/dkey.modulate = Color(1, 1, 1, 0.5)
+			wkey.modulate = Color(1, 1, 1, 1)
+			akey.modulate = Color(1, 1, 1, 0.5)
+			skey.modulate = Color(1, 1, 1, 0.5)
+			dkey.modulate = Color(1, 1, 1, 0.5)
 		elif next_key == 1:
-			$UI/MiddlePanel/akey.modulate = Color(1, 1, 1, 1)
-			$UI/MiddlePanel/wkey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/skey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/dkey.modulate = Color(1, 1, 1, 0.5)
+			akey.modulate = Color(1, 1, 1, 1)
+			wkey.modulate = Color(1, 1, 1, 0.5)
+			skey.modulate = Color(1, 1, 1, 0.5)
+			dkey.modulate = Color(1, 1, 1, 0.5)
 		elif next_key == 2:
-			$UI/MiddlePanel/skey.modulate = Color(1, 1, 1, 1)
-			$UI/MiddlePanel/wkey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/akey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/dkey.modulate = Color(1, 1, 1, 0.5)
+			skey.modulate = Color(1, 1, 1, 1)
+			wkey.modulate = Color(1, 1, 1, 0.5)
+			akey.modulate = Color(1, 1, 1, 0.5)
+			dkey.modulate = Color(1, 1, 1, 0.5)
 		elif next_key == 3:
-			$UI/MiddlePanel/dkey.modulate = Color(1, 1, 1, 1)
-			$UI/MiddlePanel/akey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/skey.modulate = Color(1, 1, 1, 0.5)
-			$UI/MiddlePanel/wkey.modulate = Color(1, 1, 1, 0.5)
+			dkey.modulate = Color(1, 1, 1, 1)
+			akey.modulate = Color(1, 1, 1, 0.5)
+			skey.modulate = Color(1, 1, 1, 0.5)
+			wkey.modulate = Color(1, 1, 1, 0.5)
 
 func decay_power_bar():
 	# Decay for minigame 1
@@ -200,10 +214,10 @@ func _handle_interaction():
 	if back_machines_entered:
 		_interaction_logic(BACK_CAM_ROT, BACK_TP_POS, minigame_3_label)
 	if door_entered: # Rest
-		$UI/Fade.show()
-		$UI/Fade/AnimationPlayer.play("fade_in")
-		$UI/Fade/AnimationPlayer.queue("fade_out")
-		# if $UI/Fade/AnimationPlayer.current_animation == "fade_out":
+		fade.show()
+		animation_player.play("fade_in")
+		animation_player.queue("fade_out")
+		# if animation_player.current_animation == "fade_out":
 		fatigue_bar.value = 0
 
 func _interaction_logic(cam_rotation, tp_pos, info_label):
@@ -330,10 +344,12 @@ func _handle_exit():
 		$UI/UpperPanel.size = Vector2(280, 50)
 		power_bar.value = 0
 	else: # else, pause game
-		get_tree().paused = true
-		$UI.hide()
-		$Pause_menu.show()
-		release_mouse()
+		if not in_dialogue:
+			get_tree().paused = true
+			$UI.hide()
+			$Pause_menu.show()
+			release_mouse()
+			
 
 func _on_treadmill_area_body_entered(body: Node3D) -> void:
 	treadmills_entered = true
@@ -382,3 +398,13 @@ func _on_door_area_body_entered(body: Node3D) -> void:
 
 func _on_door_area_body_exited(body: Node3D) -> void:
 	door_entered = false
+
+
+func _on_sophie_area_body_entered(body: Node3D) -> void:
+	Dialogic.start("sophie_dialogue")
+	release_mouse()
+	in_dialogue = true
+
+func _on_dialogic_signal(on_quit: String):
+	capture_mouse()
+	in_dialogue = false

@@ -6,6 +6,7 @@ extends Control
 @onready var obj1: Label = $blur_effect/objectives_opt/reach50_any
 @onready var obj2: Label = $blur_effect/objectives_opt/reach100_all
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	_evaluate_obj1()
 	_evaluate_obj2()
@@ -39,6 +40,7 @@ func _highlight_obj(obj_count: Label, obj: Label):
 		obj.modulate = Color(1, 1, 0, 1)
 
 func _on_resume_button_pressed() -> void:
+	# Unpause
 	get_tree().paused = false
 	hide()
 	get_parent().get_node("UI").show()
@@ -46,4 +48,5 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	# Exit game
 	get_tree().quit()

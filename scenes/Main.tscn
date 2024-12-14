@@ -1,27 +1,25 @@
-[gd_scene load_steps=102 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=95 format=3 uid="uid://2r2xorepwlip"]
 
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
 [ext_resource type="PackedScene" uid="uid://bx1i634h2xb1d" path="res://scenes/environment/ground.tscn" id="2_yuwpt"]
-[ext_resource type="PackedScene" uid="uid://bn5uphvn0cu38" path="res://scenes/environment/wall.tscn" id="3_ot1kd"]
-[ext_resource type="Texture2D" uid="uid://j7xny4awx6ju" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Color.jpg" id="5_5pxup"]
+[ext_resource type="PackedScene" uid="uid://bn5uphvn0cu38" path="res://scenes/environment/wall_color1.tscn" id="3_ot1kd"]
 [ext_resource type="PackedScene" uid="uid://8i8upkiygdeo" path="res://assets/World/Gym/glass_window/scene.gltf" id="5_cc8ki"]
 [ext_resource type="PackedScene" uid="uid://xlqmwb43hp4v" path="res://scenes/environment/ceiling.tscn" id="5_vdm7y"]
 [ext_resource type="PackedScene" uid="uid://br4ok3f26bq3s" path="res://assets/World/Gym/door_with_frame/scene.gltf" id="6_1lp3k"]
 [ext_resource type="PackedScene" uid="uid://crr3skqimjjr8" path="res://scenes/ui/pause_menu.tscn" id="6_2aovo"]
 [ext_resource type="PackedScene" uid="uid://c07rrao6iy5nq" path="res://assets/World/Gym/Equipment/FBX/Treadmill_1_Main.fbx" id="6_2xra4"]
-[ext_resource type="Texture2D" uid="uid://bsjpbxfokteth" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Roughness.jpg" id="6_8enqf"]
-[ext_resource type="Texture2D" uid="uid://qpivytj80c3k" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Displacement.jpg" id="6_chwiy"]
 [ext_resource type="PackedScene" uid="uid://dncrcyoh3dyx0" path="res://scenes/ui/ui.tscn" id="6_dy26r"]
-[ext_resource type="Texture2D" uid="uid://dyptuxero30i1" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_NormalDX.jpg" id="6_i7okf"]
 [ext_resource type="PackedScene" uid="uid://coyxfgyuon2hb" path="res://assets/World/Gym/Equipment/FBX/Exercise_Bike.fbx" id="7_gwpx8"]
 [ext_resource type="PackedScene" uid="uid://bhggcevqodvoc" path="res://assets/World/Gym/Equipment/FBX/Exercise_Bike_Seat.fbx" id="8_2wns8"]
 [ext_resource type="PackedScene" uid="uid://buq7ij5osxvoq" path="res://assets/World/Gym/Equipment/FBX/Sp_Mat_1.fbx" id="8_4iok1"]
 [ext_resource type="PackedScene" uid="uid://bufbfmdvif1o" path="res://assets/World/Gym/Equipment/FBX/Desk_1.fbx" id="8_5f4sk"]
 [ext_resource type="PackedScene" uid="uid://cwkwlpl56u5nf" path="res://assets/World/Gym/air_conditioner/scene.gltf" id="8_e3idg"]
 [ext_resource type="PackedScene" uid="uid://b1ej5pmdps6k3" path="res://assets/World/Gym/Equipment/FBX/Sp_Mat_2.fbx" id="9_5ax74"]
+[ext_resource type="PackedScene" uid="uid://bko32al3j8501" path="res://scenes/environment/wall_color2.tscn" id="9_8kxtq"]
 [ext_resource type="PackedScene" uid="uid://b3piudacf3y2t" path="res://assets/World/Gym/Equipment/FBX/Keyboard.fbx" id="9_aw1sg"]
 [ext_resource type="PackedScene" uid="uid://bg7od2e87itq3" path="res://assets/World/Gym/Equipment/FBX/Exercise_Bike_Pedal_A.fbx" id="9_wd73p"]
+[ext_resource type="Material" uid="uid://bo5uca64e6wu5" path="res://assets/Materials/wall_color2_csg.tres" id="10_43mvd"]
 [ext_resource type="PackedScene" uid="uid://dcw03n5teex6f" path="res://assets/World/Gym/Equipment/FBX/Mouse.fbx" id="10_e556c"]
 [ext_resource type="PackedScene" uid="uid://ch3dllx43rdfm" path="res://assets/World/Gym/Equipment/FBX/Kettlebell.fbx" id="10_l3xu0"]
 [ext_resource type="PackedScene" uid="uid://cyla8iscrrpjv" path="res://assets/World/Gym/Equipment/FBX/Exercise_Bike_Pedal_B.fbx" id="10_ycqak"]
@@ -38,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://2pkurkg43nqf" path="res://assets/World/Gym/Equipment/FBX/CTable_3.fbx" id="15_1a0em"]
 [ext_resource type="PackedScene" uid="uid://c24m6wdkn808i" path="res://assets/World/Gym/Equipment/FBX/Sofa_3.fbx" id="15_5h2g8"]
 [ext_resource type="PackedScene" uid="uid://c84m5hm86ipb3" path="res://assets/World/Gym/Equipment/FBX/Dumbbells_2.fbx" id="15_h36mb"]
+[ext_resource type="PackedScene" uid="uid://cqdi5w5i0gp5h" path="res://scenes/environment/pillar.tscn" id="16_hqf6u"]
 [ext_resource type="PackedScene" uid="uid://jh0nkeb267xe" path="res://assets/World/Gym/Equipment/FBX/CTable_3_Glass.fbx" id="16_ol7oc"]
 [ext_resource type="PackedScene" uid="uid://uqkorruqsjvi" path="res://assets/World/Gym/rhyzome_plant/scene.gltf" id="16_tu1yt"]
 [ext_resource type="PackedScene" uid="uid://bhxosafaxhjk6" path="res://assets/World/Gym/ceiling_lamp/scene.gltf" id="16_yui1b"]
@@ -45,14 +44,12 @@
 [ext_resource type="PackedScene" uid="uid://blwkk50v13oll" path="res://assets/World/Gym/Equipment/FBX/Barbell_1.fbx" id="17_bx0xf"]
 [ext_resource type="PackedScene" uid="uid://cfbaqwmt4a2c6" path="res://assets/World/Gym/Equipment/FBX/Painting.fbx" id="18_25ouv"]
 [ext_resource type="PackedScene" uid="uid://b1h6g0l0xbeya" path="res://assets/World/Gym/Equipment/FBX/EzBar.fbx" id="18_k123i"]
-[ext_resource type="Material" uid="uid://ckkqx3dcq6u5h" path="res://assets/Materials/carpet4.tres" id="19_1vafl"]
 [ext_resource type="PackedScene" uid="uid://d1s1qfqa2c68c" path="res://assets/World/Gym/Equipment/FBX/Bench_A.fbx" id="19_hmnq7"]
 [ext_resource type="PackedScene" uid="uid://c4jt3gvwgnqo2" path="res://assets/World/Gym/Equipment/FBX/Bench_B.fbx" id="20_d1cco"]
 [ext_resource type="PackedScene" uid="uid://upgab53om5fr" path="res://assets/World/Gym/Equipment/FBX/E_Machine_1.fbx" id="21_hdhfh"]
 [ext_resource type="PackedScene" uid="uid://locy5c8r6w0c" path="res://assets/World/Gym/Equipment/FBX/E_Machine_Ac_1.fbx" id="22_aqq58"]
 [ext_resource type="PackedScene" uid="uid://dr7keq61ned0t" path="res://assets/World/Gym/Equipment/FBX/E_Machine_3.fbx" id="23_fn588"]
 [ext_resource type="PackedScene" uid="uid://cp2a5e0rk0pdh" path="res://assets/World/Gym/Equipment/FBX/Weight_D.fbx" id="23_qlyw6"]
-[ext_resource type="Material" uid="uid://3ftwcyd6rfye" path="res://assets/Materials/carpet5.tres" id="24_cpoys"]
 [ext_resource type="PackedScene" uid="uid://bkum7fuw6gtq6" path="res://assets/World/Gym/Equipment/FBX/Bench_C.fbx" id="24_xxmrs"]
 [ext_resource type="PackedScene" uid="uid://c3q58vl7l5ro7" path="res://assets/World/Gym/Equipment/FBX/Bench_D.fbx" id="25_0h2n2"]
 [ext_resource type="PackedScene" uid="uid://dgjnpx450bh3f" path="res://assets/World/Gym/Equipment/FBX/PullDown_Ac_1.fbx" id="25_l2kl7"]
@@ -66,8 +63,6 @@
 [ext_resource type="PackedScene" uid="uid://r662glfkjqc6" path="res://assets/World/Gym/Equipment/FBX/PecDeck_Ac_2.fbx" id="33_856s6"]
 [ext_resource type="Material" uid="uid://cv5aqofkkap0r" path="res://assets/Materials/carpet3.tres" id="36_0qrgr"]
 [ext_resource type="PackedScene" uid="uid://026hxc0dwhpe" path="res://assets/World/Gym/Equipment/FBX/Bench_Press.fbx" id="38_ykskq"]
-[ext_resource type="Material" uid="uid://bg33lecyp87vo" path="res://assets/Materials/carpet2.tres" id="52_2ajb0"]
-[ext_resource type="VoxelGIData" uid="uid://c0og1do46v6rn" path="res://scenes/data/Main.VoxelGI_data.res" id="59_fjeaq"]
 [ext_resource type="PackedScene" uid="uid://b2iw5wxbl43s7" path="res://assets/World/Gym/whiteboard/scene.gltf" id="60_6j5i8"]
 [ext_resource type="PackedScene" uid="uid://dhj3bwnqf1k3v" path="res://assets/World/Gym/Equipment/FBX/CTable_1.fbx" id="60_qbplf"]
 [ext_resource type="PackedScene" uid="uid://dvv0sif06rdg1" path="res://assets/World/Gym/niceday_whiteboard_marker/scene.gltf" id="61_knqf7"]
@@ -86,29 +81,6 @@
 [ext_resource type="PackedScene" uid="uid://b4yywr04obmej" path="res://scenes/characters/sophie_character.tscn" id="82_2exti"]
 [ext_resource type="PackedScene" uid="uid://gro0ioaipn25" path="res://scenes/characters/adam_character.tscn" id="83_ryo7a"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_6j3ab"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dedhp"]
-albedo_texture = ExtResource("5_5pxup")
-roughness_texture = ExtResource("6_8enqf")
-normal_enabled = true
-normal_texture = ExtResource("6_i7okf")
-heightmap_enabled = true
-heightmap_scale = 1.0
-heightmap_texture = ExtResource("6_chwiy")
-uv1_scale = Vector3(1, 5, 1)
-uv2_scale = Vector3(5, 5, 5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtx1y"]
-albedo_texture = ExtResource("5_5pxup")
-roughness_texture = ExtResource("6_8enqf")
-normal_enabled = true
-normal_texture = ExtResource("6_i7okf")
-heightmap_enabled = true
-heightmap_scale = 1.0
-heightmap_texture = ExtResource("6_chwiy")
-texture_filter = 5
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_itw77"]
 size = Vector3(3, 1, 3)
 
@@ -116,21 +88,21 @@ size = Vector3(3, 1, 3)
 size = Vector3(11, 1, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qk562"]
-material = ExtResource("19_1vafl")
+material = ExtResource("28_c3pje")
 size = Vector3(12, 0.01, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_880cq"]
 size = Vector3(10, 1, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_o6pki"]
-material = ExtResource("24_cpoys")
+material = ExtResource("28_c3pje")
 size = Vector3(10, 0.01, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_waiyh"]
 size = Vector3(8, 1, 7)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dwd1f"]
-material = ExtResource("28_c3pje")
+material = ExtResource("73_n24vg")
 size = Vector3(8.5, 0.01, 7)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8t6x8"]
@@ -151,22 +123,21 @@ size = Vector3(12, 0.01, 6)
 size = Vector3(3, 1, 8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5idjd"]
-material = ExtResource("52_2ajb0")
+material = ExtResource("36_0qrgr")
 size = Vector3(3, 0.01, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_57psu"]
+size = Vector3(4, 1, 4)
 
 [node name="World" type="Node3D"]
 process_mode = 1
 
-[node name="helper" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.6, 2.6)
-visible = false
-mesh = SubResource("BoxMesh_6j3ab")
-
-[node name="SecondaryLighting" type="VoxelGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-visible = false
-size = Vector3(30, 8, 30)
-data = ExtResource("59_fjeaq")
+[node name="ExteriorReflections" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 35.6)
+size = Vector3(200, 60, 40)
+box_projection = true
+enable_shadows = true
+ambient_mode = 0
 
 [node name="City" parent="." instance=ExtResource("69_xwekq")]
 transform = Transform3D(-0.02, 0, 3.01992e-09, 0, 0.02, 0, -3.01992e-09, 0, -0.02, -396.1, -1, -109.3)
@@ -201,11 +172,11 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -11.99, 
 
 [node name="ground" parent="Gym/Walls" instance=ExtResource("2_yuwpt")]
 
-[node name="wall" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5091, 2.98891, 0)
+[node name="wall" parent="Gym/Walls" instance=ExtResource("9_8kxtq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.509, 2.989, 0)
 
 [node name="air_conditioner" parent="Gym/Walls/wall" instance=ExtResource("8_e3idg")]
-transform = Transform3D(-0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, -0.684644, -0.7, -0.1)
+transform = Transform3D(-0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, -0.684544, -0.70009, -0.1)
 
 [node name="wall2" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4689, 2.98228, 0)
@@ -219,7 +190,7 @@ transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0, 3, 
 [node name="CSGBox3D" type="CSGBox3D" parent="Gym/Walls/wall3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2.98023e-07)
 size = Vector3(1, 5, 30)
-material = SubResource("StandardMaterial3D_dedhp")
+material = ExtResource("10_43mvd")
 
 [node name="window" parent="Gym/Walls/wall3/CSGBox3D" instance=ExtResource("5_cc8ki")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -6.48127, -1.2, -8.99999)
@@ -228,7 +199,7 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -6.48127, -1.2, -8.9999
 transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, -0.150004)
 operation = 2
 size = Vector3(1, 2.1, 6.8)
-material = SubResource("StandardMaterial3D_wtx1y")
+material = ExtResource("10_43mvd")
 
 [node name="window2" parent="Gym/Walls/wall3/CSGBox3D2" instance=ExtResource("5_cc8ki")]
 transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6.48127, -1.2, 0.150004)
@@ -237,7 +208,7 @@ transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6
 transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, 8.75)
 operation = 2
 size = Vector3(1, 2.1, 6.8)
-material = SubResource("StandardMaterial3D_wtx1y")
+material = ExtResource("10_43mvd")
 
 [node name="window3" parent="Gym/Walls/wall3/CSGBox3D4" instance=ExtResource("5_cc8ki")]
 transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6.48127, -1.2, 0.150007)
@@ -246,7 +217,7 @@ transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6
 transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, -9.15)
 operation = 2
 size = Vector3(1, 2.1, 6.8)
-material = SubResource("StandardMaterial3D_wtx1y")
+material = ExtResource("10_43mvd")
 
 [node name="usedascollider" parent="Gym/Walls/wall3" instance=ExtResource("3_ot1kd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2.98023e-07)
@@ -275,68 +246,92 @@ shape = SubResource("BoxShape3D_itw77")
 [node name="plant" parent="Gym/Walls/door" instance=ExtResource("16_tu1yt")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 176.923, 7.62939e-06, 53.8462)
 
+[node name="Pillars" type="Node3D" parent="Gym"]
+
+[node name="pillar" parent="Gym/Pillars" instance=ExtResource("16_hqf6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -4)
+
+[node name="pillar2" parent="Gym/Pillars" instance=ExtResource("16_hqf6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, 6)
+
 [node name="Lights" type="Node3D" parent="Gym"]
 
 [node name="light" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.6, 4.7, 9)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model" parent="Gym/Lights/light" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, -3.9)
 
 [node name="light2" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.6, 4.7, 3)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model2" parent="Gym/Lights/light2" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 2.38419e-07, -3.9)
 
 [node name="light3" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 4.7, -3)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model3" parent="Gym/Lights/light3" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3.9, 0)
 
 [node name="light4" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6, 4.7, -9)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model4" parent="Gym/Lights/light4" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3.9, -0.1)
 
 [node name="light5" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 4.7, 9)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model5" parent="Gym/Lights/light5" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3.9, 0)
 
 [node name="light6" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 4.7, 3)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model6" parent="Gym/Lights/light6" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3.9, 0)
 
 [node name="light7" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 4.7, -3)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model7" parent="Gym/Lights/light7" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3.9, 0)
 
 [node name="light8" type="OmniLight3D" parent="Gym/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6, 4.7, -9)
+light_energy = 8.0
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 30.0
+omni_attenuation = 2.0
 
 [node name="light_model8" parent="Gym/Lights/light8" instance=ExtResource("16_yui1b")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3.9, -0.1)
@@ -1556,6 +1551,12 @@ texture = ExtResource("68_2sca3")
 [node name="sophie_character" parent="Gym" instance=ExtResource("82_2exti")]
 transform = Transform3D(0.46488, 0, 0.996939, 0, 1.1, 0, -0.996939, 0, 0.46488, -13.5, 0.536279, -11.7)
 
+[node name="sophie_area" type="Area3D" parent="Gym/sophie_character"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/sophie_character/sophie_area"]
+transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0.235629, 0.545455, 1.79596)
+shape = SubResource("BoxShape3D_57psu")
+
 [node name="adam_character" parent="Gym" instance=ExtResource("83_ryo7a")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -5.6, 0.5, -13.5)
 
@@ -1587,3 +1588,4 @@ transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -5.6, 0.5, -13.5)
 [connection signal="body_entered" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_entered"]
 [connection signal="body_exited" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player" method="_on_benchpress_area_body_exited"]
 [connection signal="body_exited" from="Gym/Equipment/BenchPress/BenchpressArea" to="Player/UI" method="_on_bench_press_exited"]
+[connection signal="body_entered" from="Gym/sophie_character/sophie_area" to="Player" method="_on_sophie_area_body_entered"]

@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://pgced22ntyf6"]
+
+[ext_resource type="Texture2D" uid="uid://j7xny4awx6ju" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Color.jpg" id="1_wv7b8"]
+[ext_resource type="Texture2D" uid="uid://qpivytj80c3k" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Displacement.jpg" id="3_mqsf8"]
+[ext_resource type="Texture2D" uid="uid://dyptuxero30i1" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_NormalDX.jpg" id="4_c382r"]
+[ext_resource type="Texture2D" uid="uid://bsjpbxfokteth" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Roughness.jpg" id="5_woe6o"]
+
+[resource]
+albedo_color = Color(0.439216, 0.501961, 0.564706, 1)
+albedo_texture = ExtResource("1_wv7b8")
+roughness_texture = ExtResource("5_woe6o")
+normal_enabled = true
+normal_texture = ExtResource("4_c382r")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("3_mqsf8")
+uv1_scale = Vector3(15, 2, 1)
+uv2_scale = Vector3(-10, -2, -2)
+texture_filter = 5

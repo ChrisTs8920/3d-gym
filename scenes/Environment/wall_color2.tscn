@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bko32al3j8501"]
+
+[ext_resource type="Material" uid="uid://pgced22ntyf6" path="res://assets/Materials/wall_color2.tres" id="1_rubd2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wotq1"]
+size = Vector3(1, 5, 30)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5g6ih"]
+material = ExtResource("1_rubd2")
+size = Vector3(1, 5, 30)
+
+[node name="wall" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_wotq1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_5g6ih")
