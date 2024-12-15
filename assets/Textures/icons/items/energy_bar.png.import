@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dantdiv4bx84m"
-path="res://.godot/imported/ikey.png-49486cb03a11fb1a26f64ba282e4806b.ctex"
+uid="uid://co4gr8xj2i6jx"
+path="res://.godot/imported/energy_bar.png-1c1dbbbfebcd8320a1afd2f1e0e0dc15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/icons/ikey.png"
-dest_files=["res://.godot/imported/ikey.png-49486cb03a11fb1a26f64ba282e4806b.ctex"]
+source_file="res://assets/Textures/icons/items/energy_bar.png"
+dest_files=["res://.godot/imported/energy_bar.png-1c1dbbbfebcd8320a1afd2f1e0e0dc15.ctex"]
 
 [params]
 

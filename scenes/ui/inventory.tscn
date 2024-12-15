@@ -1,0 +1,448 @@
+[gd_scene load_steps=11 format=3 uid="uid://dgd4molj82ven"]
+
+[ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_7hlye"]
+[ext_resource type="Shader" path="res://scenes/ui/blur_pause.gdshader" id="1_aah7c"]
+[ext_resource type="Texture2D" uid="uid://cm0jt7jdcx1wj" path="res://icon.svg" id="2_4mbto"]
+[ext_resource type="Script" path="res://scenes/ui/inventory.gd" id="2_iekem"]
+
+[sub_resource type="Theme" id="Theme_sicys"]
+default_font = ExtResource("1_7hlye")
+default_font_size = 32
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2cti"]
+shader = ExtResource("1_aah7c")
+shader_parameter/lod = 5.0
+shader_parameter/mix_percentage = 0.3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0vep"]
+bg_color = Color(0.0666667, 0.0745098, 0.0941176, 0.701961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.886275, 0.886275, 0.913725, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlwmr"]
+bg_color = Color(0.0666667, 0.0745098, 0.0941176, 0.701961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.886275, 0.886275, 0.913725, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_jcqp5"]
+default_font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhpjn"]
+bg_color = Color(0.067, 0.075, 0.094, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.886275, 0.886275, 0.913725, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Inventory" type="Control"]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_sicys")
+script = ExtResource("2_iekem")
+
+[node name="blur_effect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_h2cti")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4mbto")
+expand_mode = 1
+
+[node name="InvLabel" type="Label" parent="blur_effect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.5
+offset_top = 100.0
+offset_right = 66.5
+offset_bottom = 138.0
+grow_horizontal = 2
+text = "Inventory"
+
+[node name="Button" type="Button" parent="blur_effect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.5
+offset_top = -112.0
+offset_right = 37.5
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_w0vep")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mlwmr")
+text = " Back "
+
+[node name="GridContainer" type="GridContainer" parent="blur_effect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -180.0
+offset_right = 180.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="slot1" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot1/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot1/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot2" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot2/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot2/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot3" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot3/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot3/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot4" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot4/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot4/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot5" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot5/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot5/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot6" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot6/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot6/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot7" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot7"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot7/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot7/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot8" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot8"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot8/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot8/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot9" type="MarginContainer" parent="blur_effect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="blur_effect/GridContainer/slot9"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_jcqp5")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhpjn")
+
+[node name="sprite" type="Sprite2D" parent="blur_effect/GridContainer/slot9/Panel"]
+position = Vector2(49, 40)
+
+[node name="name" type="Label" parent="blur_effect/GridContainer/slot9/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "- EMPTY - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="blur_effect/Button" to="." method="_on_button_pressed"]

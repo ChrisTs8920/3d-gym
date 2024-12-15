@@ -74,7 +74,7 @@ offset_right = -213.0
 offset_bottom = -61.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game Paused.
+text = "Game Paused
 "
 
 [node name="resume_button" type="Button" parent="blur_effect/pause_label"]

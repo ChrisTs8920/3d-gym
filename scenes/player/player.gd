@@ -67,9 +67,7 @@ const BACK_CAM_ROT: Vector3 = Vector3(0, 90, 0)
 # Door Interaction
 var door_entered: bool = false
 
-var in_dialogue: bool = false
-
-
+# UI resources
 @onready var camera: Camera3D = $Camera
 
 @onready var power_bar: ProgressBar = $UI/UpperPanel/Power/PowerProgress
@@ -89,6 +87,8 @@ var in_dialogue: bool = false
 
 func _ready() -> void:
 	capture_mouse()
+	
+	animation_player.animation_finished.connect(_continue_movement)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -106,6 +106,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("a_minigame_3"): _handle_minigame_3("a")
 	if Input.is_action_just_pressed("s_minigame_3"): _handle_minigame_3("s")
 	if Input.is_action_just_pressed("d_minigame_3"): _handle_minigame_3("d")
+	# Inventory
+	if Input.is_action_just_pressed("inventory"): _handle_inventory()
 	# Other actions
 	if Input.is_action_just_pressed("jump"): _handle_jump()
 	if Input.is_action_just_pressed("exit"): _handle_exit()
@@ -214,10 +216,10 @@ func _handle_interaction():
 	if back_machines_entered:
 		_interaction_logic(BACK_CAM_ROT, BACK_TP_POS, minigame_3_label)
 	if door_entered: # Rest
+		player_interacted = true
 		fade.show()
 		animation_player.play("fade_in")
 		animation_player.queue("fade_out")
-		# if animation_player.current_animation == "fade_out":
 		fatigue_bar.value = 0
 
 func _interaction_logic(cam_rotation, tp_pos, info_label):
@@ -344,12 +346,27 @@ func _handle_exit():
 		$UI/UpperPanel.size = Vector2(280, 50)
 		power_bar.value = 0
 	else: # else, pause game
-		if not in_dialogue:
-			get_tree().paused = true
-			$UI.hide()
-			$Pause_menu.show()
-			release_mouse()
-			
+		if Dialogic.Text.is_textbox_visible(): # If there is an active dialogue
+			Dialogic.end_timeline()
+		get_tree().paused = true
+		$UI.hide()
+		$Inventory.hide()
+		$Pause_menu.show()
+		release_mouse()
+		
+func _handle_inventory():
+	if not player_interacted:
+		if Dialogic.Text.is_textbox_visible(): # If there is an active dialogue
+			Dialogic.end_timeline()
+		get_tree().paused = true
+		$UI.hide()
+		$Inventory.show()
+		release_mouse()
+
+func _continue_movement(signalName: StringName) -> void:
+	if signalName == "fade_out":
+		player_interacted = false
+
 
 func _on_treadmill_area_body_entered(body: Node3D) -> void:
 	treadmills_entered = true
@@ -403,8 +420,19 @@ func _on_door_area_body_exited(body: Node3D) -> void:
 func _on_sophie_area_body_entered(body: Node3D) -> void:
 	Dialogic.start("sophie_dialogue")
 	release_mouse()
-	in_dialogue = true
 
-func _on_dialogic_signal(on_quit: String):
+func _on_sophie_area_body_exited(body: Node3D) -> void:
+	Dialogic.end_timeline()
 	capture_mouse()
-	in_dialogue = false
+
+func _on_dialogic_signal(on_quit_signal: String):
+	capture_mouse()
+
+
+func _on_adam_area_body_entered(body: Node3D) -> void:
+	Dialogic.start("adam_dialogue")
+	release_mouse()
+
+func _on_adam_area_body_exited(body: Node3D) -> void:
+	Dialogic.end_timeline()
+	capture_mouse()

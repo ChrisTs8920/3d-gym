@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb8jsa6kq6qkt"
-path.s3tc="res://.godot/imported/esc_key2.png-d866d273f1758b103e0dab18dc991f35.s3tc.ctex"
+uid="uid://ceke8asnl7ggf"
+path.s3tc="res://.godot/imported/Coffee_Crisp_normal.png-7bfedb33e2a64abbca71b68a93e3e955.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Textures/icons/esc_key2.png"
-dest_files=["res://.godot/imported/esc_key2.png-d866d273f1758b103e0dab18dc991f35.s3tc.ctex"]
+source_file="res://assets/World/Gym/coffee_crisp/textures/Coffee_Crisp_normal.png"
+dest_files=["res://.godot/imported/Coffee_Crisp_normal.png-7bfedb33e2a64abbca71b68a93e3e955.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/World/Gym/coffee_crisp/textures/Coffee_Crisp_normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

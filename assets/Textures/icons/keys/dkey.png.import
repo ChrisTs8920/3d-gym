@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0yiy681e1axn"
-path="res://.godot/imported/skey.png-4c8852d8c8fc6f7ac51afa47b9b1697a.ctex"
+uid="uid://drj4laklx1yi3"
+path="res://.godot/imported/dkey.png-df9caedc4380406140b8798d1d3fb9f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/icons/skey.png"
-dest_files=["res://.godot/imported/skey.png-4c8852d8c8fc6f7ac51afa47b9b1697a.ctex"]
+source_file="res://assets/Textures/icons/keys/dkey.png"
+dest_files=["res://.godot/imported/dkey.png-df9caedc4380406140b8798d1d3fb9f4.ctex"]
 
 [params]
 

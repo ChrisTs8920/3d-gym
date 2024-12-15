@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5bcqxnu3w722"
-path="res://.godot/imported/esckey.png-3d3d700c3cfaebe55e516075a0c8c370.ctex"
+uid="uid://cv3qsuudqaqb"
+path="res://.godot/imported/towel.png-ea044aab1033f9c46600b2196b4a8ae5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/icons/esckey.png"
-dest_files=["res://.godot/imported/esckey.png-3d3d700c3cfaebe55e516075a0c8c370.ctex"]
+source_file="res://assets/Textures/icons/items/towel.png"
+dest_files=["res://.godot/imported/towel.png-ea044aab1033f9c46600b2196b4a8ae5.ctex"]
 
 [params]
 

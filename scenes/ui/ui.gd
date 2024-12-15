@@ -16,16 +16,6 @@ const m_panel = Vector2(300, 55)
 const l_panel = Vector2(330, 55)
 const xl_panel = Vector2(350, 55)
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_treadmills_entered(body: Node3D) -> void:
 	$LowerPanel.show()
 	$LowerPanel.size = m_panel

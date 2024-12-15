@@ -1,0 +1,316 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 117,
+      "max": [
+        4.137547492980957,
+        1.2756010293960571,
+        0.9406663775444031
+      ],
+      "min": [
+        -4.243459701538086,
+        -0.8343076109886169,
+        -0.7252954840660095
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1404,
+      "componentType": 5126,
+      "count": 117,
+      "max": [
+        0.708665132522583,
+        0.998928964138031,
+        0.9997880458831787
+      ],
+      "min": [
+        -0.828244686126709,
+        -0.9994523525238037,
+        -0.9999386072158813
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 117,
+      "max": [
+        0.4731560945510864,
+        0.9999801516532898,
+        0.9996710419654846,
+        1.0
+      ],
+      "min": [
+        -0.4643537104129791,
+        -0.716446578502655,
+        -0.9993401765823364,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 117,
+      "max": [
+        0.9626975059509277,
+        0.9914155006408691
+      ],
+      "min": [
+        0.02371099591255188,
+        0.00858449935913086
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 936,
+      "componentType": 5126,
+      "count": 117,
+      "max": [
+        0.9626975059509277,
+        0.9914155006408691
+      ],
+      "min": [
+        0.02371099591255188,
+        0.00858449935913086
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1872,
+      "componentType": 5126,
+      "count": 117,
+      "max": [
+        0.9626975059509277,
+        0.9914155006408691
+      ],
+      "min": [
+        0.02371099591255188,
+        0.00858449935913086
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 444,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Duznot (https://sketchfab.com/duz_vr)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/coffee-crisp-bc5e39c932a84fe3b6a4f7d4e873a16f",
+      "title": "Coffee Crisp"
+    },
+    "generator": "Sketchfab-14.32.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1776,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2808,
+      "byteOffset": 1776,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2808,
+      "byteOffset": 4584,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1872,
+      "byteOffset": 7392,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 9264,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Coffee_Crisp_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Coffee_Crisp_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Coffee_Crisp_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Coffee_Crisp",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "CC_Coffee Crisp_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5
+          },
+          "indices": 6,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.8424749970436096,
+        -0.524738073348999,
+        -0.12200757116079342,
+        0.0,
+        -0.14332522451877594,
+        2.1975213672306715e-16,
+        -0.9896756410598755,
+        0.0,
+        0.5193204879760742,
+        0.851263701915741,
+        -0.07520820945501308,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "CoffeeCrisp.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        78.91405485300598,
+        52.8189362643952,
+        31.348555286560227,
+        0.0,
+        -47.01898015244564,
+        84.78838285296817,
+        -24.497901226051606,
+        0.0,
+        -39.51946390994576,
+        4.592516223095386,
+        91.7448761124569,
+        0.0,
+        -19.892921447753906,
+        261.1896057128906,
+        3.0988110665930435e-05,
+        1.0
+      ],
+      "name": "CC"
+    },
+    {
+      "mesh": 0,
+      "name": "CC_Coffee Crisp_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

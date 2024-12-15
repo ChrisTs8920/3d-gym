@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpe0mqfsmr0hr"
-path="res://.godot/imported/spacebar.png-9a17f5a166b801c69653f84c25ca5954.ctex"
+uid="uid://crucm23a880ks"
+path="res://.godot/imported/akey.png-7b7e92d98a78f50c1caf43417be93704.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/icons/spacebar.png"
-dest_files=["res://.godot/imported/spacebar.png-9a17f5a166b801c69653f84c25ca5954.ctex"]
+source_file="res://assets/Textures/icons/keys/akey.png"
+dest_files=["res://.godot/imported/akey.png-7b7e92d98a78f50c1caf43417be93704.ctex"]
 
 [params]
 

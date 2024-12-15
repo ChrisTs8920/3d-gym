@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coffee Crisp
+* source:	https://sketchfab.com/3d-models/coffee-crisp-bc5e39c932a84fe3b6a4f7d4e873a16f
+* author:	Duznot (https://sketchfab.com/duz_vr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coffee Crisp" (https://sketchfab.com/3d-models/coffee-crisp-bc5e39c932a84fe3b6a4f7d4e873a16f) by Duznot (https://sketchfab.com/duz_vr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

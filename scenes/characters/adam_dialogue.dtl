@@ -1,0 +1,19 @@
+set {item_selected} = ""
+adam_personal_trainer: Hello, how can i help you?
+- Can i see what you have for sale?
+	adam_personal_trainer: Sure! What would you like?
+	- Protein powder (Boosts power generation by 20%).
+		set {item_selected} = "Protein"
+		[signal arg="bought_item"]
+		adam_personal_trainer: Here you go!
+	- Creatine powder (Boosts power generation by 20%).
+		set {item_selected} = "Creatine"
+		[signal arg="bought_item"]
+		adam_personal_trainer: Here you go!
+	- A towel (Reduces fatigue by 20%).
+		set {item_selected} = "Towel"
+		[signal arg="bought_item"]
+		adam_personal_trainer: Here you go!
+	- Nevermind.
+- Nevermind.
+[signal arg="on_quit"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs7jd1u364irf"
-path.s3tc="res://.godot/imported/ekey.png-b1b41104785c98272047afaeacdceb23.s3tc.ctex"
+uid="uid://b4ewgk4ecjhib"
+path.s3tc="res://.godot/imported/Coffee_Crisp_metallicRoughness.png-57bb2235786b826b97a12a23fdf2329f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Textures/icons/ekey.png"
-dest_files=["res://.godot/imported/ekey.png-b1b41104785c98272047afaeacdceb23.s3tc.ctex"]
+source_file="res://assets/World/Gym/coffee_crisp/textures/Coffee_Crisp_metallicRoughness.png"
+dest_files=["res://.godot/imported/Coffee_Crisp_metallicRoughness.png-57bb2235786b826b97a12a23fdf2329f.s3tc.ctex"]
 
 [params]
 

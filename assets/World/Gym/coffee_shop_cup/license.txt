@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coffee Shop Cup
+* source:	https://sketchfab.com/3d-models/coffee-shop-cup-37e6805f2b7a4158a1d61fe75f8e2a33
+* author:	David Zerba (https://sketchfab.com/DavidZerba)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coffee Shop Cup" (https://sketchfab.com/3d-models/coffee-shop-cup-37e6805f2b7a4158a1d61fe75f8e2a33) by David Zerba (https://sketchfab.com/DavidZerba) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
