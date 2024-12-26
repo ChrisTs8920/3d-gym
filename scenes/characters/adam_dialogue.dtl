@@ -10,10 +10,22 @@ adam_personal_trainer: Hello, how can i help you?
 		set {item_selected} = "Creatine"
 		[signal arg="bought_item"]
 		adam_personal_trainer: Here you go!
-	- A towel (Reduces fatigue by 20%).
+	- Towel (Reduces fatigue by 20%).
 		set {item_selected} = "Towel"
 		[signal arg="bought_item"]
 		adam_personal_trainer: Here you go!
 	- Nevermind.
+- May i check out your training programs?
+	adam_personal_trainer: Of course.
+	- Program 1 (Boosts progression by 20%).
+		set {item_selected} = "Program 1"
+		[signal arg="bought_item"]
+		adam_personal_trainer: Here you go!
+	- Nevermind.
+- Could you give me an assessment of my physical health?
+	adam_personal_trainer: Sure!
+	adam_personal_trainer: What is your age?
+	adam_personal_trainer: What is your height?
+	adam_personal_trainer: What is your weight?
 - Nevermind.
 [signal arg="on_quit"]

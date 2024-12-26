@@ -3,7 +3,7 @@ set {item_selected} = ""
 sophie_nutritionist: Hey! What can i do for you?
 - Can i see what you have for sale?
 	sophie_nutritionist: What would you like?
-	- Bottle of water (boosts progression by 15%).
+	- Bottle of water (boosts progression by 10%).
 		set {item_selected} = "Water"
 		[signal arg="bought_item"]
 		sophie_nutritionist: Here you go!

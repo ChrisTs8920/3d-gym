@@ -162,6 +162,12 @@ func _physics_process(delta: float) -> void:
 	if not player_interacted: # Allow movement only when player has not interacted with anything
 		if mouse_captured: _handle_joypad_camera_rotation(delta)
 		velocity = _walk(delta) + _gravity(delta) + _jump(delta)
+		
+		# Footstep sound
+		if velocity.is_zero_approx() or !is_on_floor():
+			$steps.stream_paused = true
+		else:
+			$steps.stream_paused = false
 		move_and_slide()
 
 func capture_mouse() -> void:

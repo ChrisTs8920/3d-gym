@@ -1,7 +1,8 @@
-[gd_scene load_steps=102 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=114 format=3 uid="uid://2r2xorepwlip"]
 
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
+[ext_resource type="AudioStream" uid="uid://c53v4aev5iub" path="res://assets/Sounds/city_ambience.mp3" id="2_0sysr"]
 [ext_resource type="PackedScene" uid="uid://bx1i634h2xb1d" path="res://scenes/environment/ground.tscn" id="2_yuwpt"]
 [ext_resource type="PackedScene" uid="uid://bn5uphvn0cu38" path="res://scenes/environment/wall_color1.tscn" id="3_ot1kd"]
 [ext_resource type="PackedScene" uid="uid://8i8upkiygdeo" path="res://assets/World/Gym/glass_window/scene.gltf" id="5_cc8ki"]
@@ -22,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bg7od2e87itq3" path="res://assets/World/Gym/Equipment/FBX/Exercise_Bike_Pedal_A.fbx" id="9_wd73p"]
 [ext_resource type="Material" uid="uid://bo5uca64e6wu5" path="res://assets/Materials/wall_color2_csg.tres" id="10_43mvd"]
 [ext_resource type="PackedScene" uid="uid://dcw03n5teex6f" path="res://assets/World/Gym/Equipment/FBX/Mouse.fbx" id="10_e556c"]
+[ext_resource type="AudioStream" uid="uid://kkai2dhh7xv3" path="res://assets/Sounds/ac.wav" id="10_glhv0"]
 [ext_resource type="PackedScene" uid="uid://ch3dllx43rdfm" path="res://assets/World/Gym/Equipment/FBX/Kettlebell.fbx" id="10_l3xu0"]
 [ext_resource type="PackedScene" uid="uid://cyla8iscrrpjv" path="res://assets/World/Gym/Equipment/FBX/Exercise_Bike_Pedal_B.fbx" id="10_ycqak"]
 [ext_resource type="PackedScene" uid="uid://dn746pss0nbwq" path="res://assets/World/Gym/Equipment/FBX/Weight_Stand_1.fbx" id="11_3g3mp"]
@@ -29,14 +31,20 @@
 [ext_resource type="PackedScene" uid="uid://dyrylqg5qu8jj" path="res://assets/World/Gym/Equipment/FBX/Barbell_Stand_1.fbx" id="12_6no6e"]
 [ext_resource type="PackedScene" uid="uid://b6sbpsqjlgnup" path="res://assets/World/Gym/Equipment/FBX/Weight_A.fbx" id="12_un7og"]
 [ext_resource type="PackedScene" uid="uid://bap1go14tjxpa" path="res://assets/World/Gym/Equipment/FBX/Plant_Deco.fbx" id="12_ye7yc"]
+[ext_resource type="Texture2D" uid="uid://j7xny4awx6ju" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Color.jpg" id="13_1xnuh"]
+[ext_resource type="AudioStream" uid="uid://ck4681qn5000w" path="res://assets/Sounds/music2.mp3" id="13_2ptg7"]
 [ext_resource type="PackedScene" uid="uid://b6412ycj50oct" path="res://assets/World/Gym/Equipment/FBX/Weight_B.fbx" id="13_3a3nu"]
 [ext_resource type="PackedScene" uid="uid://bg16xr4tytcjw" path="res://assets/World/Gym/Equipment/FBX/Sofa_2.fbx" id="13_dr0tc"]
 [ext_resource type="PackedScene" uid="uid://b8y0jdbccxs0f" path="res://assets/World/Gym/clock/scene.gltf" id="14_j7a0a"]
 [ext_resource type="PackedScene" uid="uid://ba0px2nfclgur" path="res://assets/World/Gym/Equipment/FBX/Sofa_1.fbx" id="14_l0en8"]
+[ext_resource type="AudioStream" uid="uid://durqfxkatrc3r" path="res://assets/Sounds/music3.mp3" id="14_sqp15"]
 [ext_resource type="PackedScene" uid="uid://d2f1lx8fpadu1" path="res://assets/World/Gym/Equipment/FBX/Dumbbells_1.fbx" id="14_w8p8t"]
+[ext_resource type="Texture2D" uid="uid://qpivytj80c3k" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Displacement.jpg" id="14_xcdnj"]
 [ext_resource type="PackedScene" uid="uid://2pkurkg43nqf" path="res://assets/World/Gym/Equipment/FBX/CTable_3.fbx" id="15_1a0em"]
 [ext_resource type="PackedScene" uid="uid://c24m6wdkn808i" path="res://assets/World/Gym/Equipment/FBX/Sofa_3.fbx" id="15_5h2g8"]
 [ext_resource type="PackedScene" uid="uid://c84m5hm86ipb3" path="res://assets/World/Gym/Equipment/FBX/Dumbbells_2.fbx" id="15_h36mb"]
+[ext_resource type="Texture2D" uid="uid://dyptuxero30i1" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_NormalDX.jpg" id="15_hfcat"]
+[ext_resource type="Texture2D" uid="uid://bsjpbxfokteth" path="res://assets/Textures/Plaster001_2K-JPG/Plaster001_2K-JPG_Roughness.jpg" id="16_75fjt"]
 [ext_resource type="PackedScene" uid="uid://cqdi5w5i0gp5h" path="res://scenes/environment/pillar.tscn" id="16_hqf6u"]
 [ext_resource type="PackedScene" uid="uid://jh0nkeb267xe" path="res://assets/World/Gym/Equipment/FBX/CTable_3_Glass.fbx" id="16_ol7oc"]
 [ext_resource type="PackedScene" uid="uid://uqkorruqsjvi" path="res://assets/World/Gym/rhyzome_plant/scene.gltf" id="16_tu1yt"]
@@ -61,7 +69,9 @@
 [ext_resource type="PackedScene" uid="uid://cpyqmr0edvnv5" path="res://assets/World/Gym/Equipment/FBX/Weight_Bar_C.fbx" id="32_kshw5"]
 [ext_resource type="PackedScene" uid="uid://bm3h750vv31d5" path="res://assets/World/Gym/Equipment/FBX/Sm_Machine.fbx" id="32_l8m0q"]
 [ext_resource type="PackedScene" uid="uid://o3afig4lxum3" path="res://assets/World/Gym/Equipment/FBX/Pec_Machine_Ac_1.fbx" id="32_ln001"]
+[ext_resource type="PackedScene" uid="uid://dk7ryaxjxaiut" path="res://assets/World/Gym/bluetooth_speaker/scene.gltf" id="33_8ya07"]
 [ext_resource type="PackedScene" uid="uid://r662glfkjqc6" path="res://assets/World/Gym/Equipment/FBX/PecDeck_Ac_2.fbx" id="33_856s6"]
+[ext_resource type="AudioStream" uid="uid://d532jtsd5qey" path="res://assets/Sounds/music.mp3" id="34_nbg4w"]
 [ext_resource type="Material" uid="uid://cv5aqofkkap0r" path="res://assets/Materials/carpet3.tres" id="36_0qrgr"]
 [ext_resource type="PackedScene" uid="uid://026hxc0dwhpe" path="res://assets/World/Gym/Equipment/FBX/Bench_Press.fbx" id="38_ykskq"]
 [ext_resource type="PackedScene" uid="uid://b2iw5wxbl43s7" path="res://assets/World/Gym/whiteboard/scene.gltf" id="60_6j5i8"]
@@ -87,6 +97,17 @@
 [ext_resource type="PackedScene" uid="uid://b4yywr04obmej" path="res://scenes/characters/sophie_character.tscn" id="82_2exti"]
 [ext_resource type="PackedScene" uid="uid://gro0ioaipn25" path="res://scenes/characters/adam_character.tscn" id="83_ryo7a"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ti4c"]
+albedo_color = Color(0.439216, 0.501961, 0.564706, 1)
+albedo_texture = ExtResource("13_1xnuh")
+roughness_texture = ExtResource("16_75fjt")
+normal_enabled = true
+normal_texture = ExtResource("15_hfcat")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("14_xcdnj")
+uv1_scale = Vector3(5, 1, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_itw77"]
 size = Vector3(3, 1, 3)
 
@@ -106,6 +127,13 @@ size = Vector3(10, 0.01, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_waiyh"]
 size = Vector3(8, 1, 7)
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_cv0sa"]
+shuffle = true
+stream_count = 3
+stream_0 = ExtResource("34_nbg4w")
+stream_1 = ExtResource("13_2ptg7")
+stream_2 = ExtResource("14_sqp15")
 
 [sub_resource type="BoxMesh" id="BoxMesh_dwd1f"]
 material = ExtResource("73_n24vg")
@@ -166,6 +194,14 @@ transform = Transform3D(1, -1.50996e-07, -6.60024e-15, 0, -4.37114e-08, 1, -1.50
 light_energy = 16.0
 spot_range = 40.0
 
+[node name="ambience" type="AudioStreamPlayer3D" parent="City"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -19715, 1445, -8775)
+stream = ExtResource("2_0sysr")
+volume_db = 2.0
+unit_size = 20.0
+max_db = 0.0
+autoplay = true
+
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_6j5mm")]
 
 [node name="Player" parent="." instance=ExtResource("1_g2tc4")]
@@ -189,11 +225,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.509, 2.989, 0)
 [node name="air_conditioner" parent="Gym/Walls/wall" instance=ExtResource("8_e3idg")]
 transform = Transform3D(-0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, -0.684544, -0.70009, -0.1)
 
+[node name="ambient" type="AudioStreamPlayer3D" parent="Gym/Walls/wall/air_conditioner"]
+transform = Transform3D(2.5, 0, 2.84217e-14, 0, 2.5, 0, -2.84217e-14, 0, 2.5, 0, 5, 0)
+stream = ExtResource("10_glhv0")
+volume_db = -5.0
+unit_size = 2.0
+max_db = 0.0
+autoplay = true
+
 [node name="wall2" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4689, 2.98228, 0)
 
 [node name="air_conditioner" parent="Gym/Walls/wall2" instance=ExtResource("8_e3idg")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.676951, -0.7, 0)
+
+[node name="ambient" type="AudioStreamPlayer3D" parent="Gym/Walls/wall2/air_conditioner"]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 0.541019, 5.01657, -0.25)
+stream = ExtResource("10_glhv0")
+volume_db = -5.0
+unit_size = 2.0
+max_db = 0.0
+autoplay = true
 
 [node name="wall3" type="CSGCombiner3D" parent="Gym/Walls"]
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0, 3, 9.5)
@@ -210,7 +262,7 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -6.48127, -1.2, -8.9999
 transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, -0.150004)
 operation = 2
 size = Vector3(1, 2.1, 6.8)
-material = ExtResource("10_43mvd")
+material = SubResource("StandardMaterial3D_2ti4c")
 
 [node name="window2" parent="Gym/Walls/wall3/CSGBox3D2" instance=ExtResource("5_cc8ki")]
 transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6.48127, -1.2, 0.150004)
@@ -219,7 +271,7 @@ transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6
 transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, 8.75)
 operation = 2
 size = Vector3(1, 2.1, 6.8)
-material = ExtResource("10_43mvd")
+material = SubResource("StandardMaterial3D_2ti4c")
 
 [node name="window3" parent="Gym/Walls/wall3/CSGBox3D4" instance=ExtResource("5_cc8ki")]
 transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6.48127, -1.2, 0.150007)
@@ -228,7 +280,7 @@ transform = Transform3D(1.2, 0, -5.40012e-13, 0, 1.2, 0, 5.40012e-13, 0, 1.2, -6
 transform = Transform3D(1, 0, 4.51195e-13, 0, 1, 0, -4.51195e-13, 0, 1, 5, 0, -9.15)
 operation = 2
 size = Vector3(1, 2.1, 6.8)
-material = ExtResource("10_43mvd")
+material = SubResource("StandardMaterial3D_2ti4c")
 
 [node name="usedascollider" parent="Gym/Walls/wall3" instance=ExtResource("3_ot1kd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2.98023e-07)
@@ -260,10 +312,10 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 176.923, 7.62939e-06, 5
 [node name="Pillars" type="Node3D" parent="Gym"]
 
 [node name="pillar" parent="Gym/Pillars" instance=ExtResource("16_hqf6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -6)
 
 [node name="pillar2" parent="Gym/Pillars" instance=ExtResource("16_hqf6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 6)
 
 [node name="Lights" type="Node3D" parent="Gym"]
 
@@ -540,6 +592,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66667, 1, -8.58333)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gym/Equipment/Mats/MatArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.583333, 0, 0.583334)
 shape = SubResource("BoxShape3D_waiyh")
+
+[node name="speaker" parent="Gym/Equipment/Mats" instance=ExtResource("33_8ya07")]
+transform = Transform3D(1.40954, 0, -0.51303, 0, 1.5, 0, 0.51303, 0, 1.40954, 3.66667, 0.416666, -10)
+
+[node name="music" type="AudioStreamPlayer3D" parent="Gym/Equipment/Mats/speaker"]
+transform = Transform3D(0.555555, 0, -1.49012e-08, 0, 0.555556, 0, 0, 0, 0.555555, 0, 0.0555556, 0)
+stream = SubResource("AudioStreamPlaylist_cv0sa")
+unit_size = 5.0
+max_db = 0.0
+autoplay = true
 
 [node name="carpet" type="MeshInstance3D" parent="Gym/Equipment/Mats"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.33333, 0.416666, -7.74999)
@@ -1493,7 +1555,7 @@ font = ExtResource("62_nddp4")
 outline_size = 0
 
 [node name="Text" type="Label3D" parent="Gym/Board/Help"]
-transform = Transform3D(1, 0, -3.69482e-13, 0, 1, 0, 3.69482e-13, 0, 1, -24.331, -43.7866, 0.00012207)
+transform = Transform3D(1, 0, -3.97904e-13, 0, 1, 0, 3.97904e-13, 0, 1, -24.331, -43.7866, 0.00012207)
 pixel_size = 0.2
 shaded = true
 texture_filter = 5
@@ -1502,6 +1564,8 @@ text = "Exercise using the equipment in the gym
 and progress through each category.
 
 Also:
+- The Nutritionist and the Personal Trainer might
+have some interesting things to say!
 - Check the pause menu for optional objectives!
 - Exercises get progressively harder!
 - Don't forget to rest when you are fatigued!"
@@ -1510,7 +1574,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="MovementKeys" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(20, 0, -1.00044e-11, 0, 20, 0, 1.00044e-11, 0, 20, -14.1416, -81.5782, 0)
+transform = Transform3D(20, 0, -1.09139e-11, 0, 20, 0, 1.09139e-11, 0, 20, -14.1416, -91.5782, 0)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1528,7 +1592,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="InteractKey" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(15, 0, -3.18323e-12, 0, 15, 0, 3.18323e-12, 0, 15, 45.8584, -81.5782, -0.000244141)
+transform = Transform3D(15, 0, -3.63798e-12, 0, 15, 0, 3.63798e-12, 0, 15, 45.8584, -91.5782, -0.000244141)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1547,7 +1611,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="EscapeKey" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(15, 0, -3.63798e-12, 0, 15, 0, 3.63798e-12, 0, 15, -14.1416, -101.578, -0.00012207)
+transform = Transform3D(15, 0, -4.09273e-12, 0, 15, 0, 4.09273e-12, 0, 15, -14.1416, -111.578, -0.00012207)
 cast_shadow = 0
 shaded = true
 texture_filter = 5
@@ -1566,7 +1630,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="InventoryKey" type="Sprite3D" parent="Gym/Board/Help"]
-transform = Transform3D(15, 0, -3.63798e-12, 0, 15, 0, 3.63798e-12, 0, 15, 45.8584, -101.578, -0.000244141)
+transform = Transform3D(15, 0, -4.09273e-12, 0, 15, 0, 4.09273e-12, 0, 15, 45.8584, -111.578, -0.000244141)
 cast_shadow = 0
 shaded = true
 texture_filter = 5

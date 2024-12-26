@@ -4,12 +4,20 @@ var slot_names: Array[Label] = []
 var slot_sprites: Array[Sprite2D] = []
 var slots: Array[Panel] = []
 
+@onready var power_step: int = Player.POWER_BAR_STEP
+@onready var progress_step: float = Player.PROGRESS_STEP
+@onready var fatigue_bar: ProgressBar = $"..UI/UpperPanel/Fatigue/FatigueProgress"
+
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_bought_item)
 	for i in range(1, 10):
 		slot_names.append(get_node("blur_effect/GridContainer/slot%s/Panel/name" % i))
 		slot_sprites.append(get_node("blur_effect/GridContainer/slot%s/Panel/sprite" % i))
 		slots.append(get_node("blur_effect/GridContainer/slot%s/Panel" % i))
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_double_click():
+		print("double clicked!")
 
 func _on_bought_item(bought_item_signal: String):
 	# Update Inventory array, if player bought an item
@@ -24,7 +32,6 @@ func _on_bought_item(bought_item_signal: String):
 
 func _on_button_pressed() -> void:
 	# Back button 
-	# Dialogic.Styles.get_layout_node().show()
 	get_tree().paused = false
 	hide()
 	get_parent().get_node("UI").show()

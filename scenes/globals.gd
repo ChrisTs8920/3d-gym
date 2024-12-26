@@ -20,17 +20,19 @@ const ALL_ITEMS = {
 	"Coffee": preload("res://assets/Textures/icons/items/coffee.png"),
 	"Protein": preload("res://assets/Textures/icons/items/protein.png"),
 	"Creatine": preload("res://assets/Textures/icons/items/creatine.png"),
-	"Towel": preload("res://assets/Textures/icons/items/towel.png")
+	"Towel": preload("res://assets/Textures/icons/items/towel.png"),
+	"Program 1": preload("res://assets/Textures/icons/items/training_program.png")
 }
 
 # All item tooltips - Dictionary
 const ITEM_TOOLTIPS = {
-	"Water": "Boosts progression by 15%",
+	"Water": "Boosts progression by 10%",
 	"Energy bar": "Reduces fatigue by 30%",
 	"Coffee": "Reduces fatigue by 50%",
 	"Protein": "Boosts power generation by 20%",
 	"Creatine": "Boosts power generation by 20%",
-	"Towel": "Reduces fatigue by 20%"
+	"Towel": "Reduces fatigue by 20%",
+	"Program 1": "Boosts progression by 20%"
 }
 
 func _ready() -> void:
