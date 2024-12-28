@@ -162,13 +162,13 @@ func _physics_process(delta: float) -> void:
 	if not player_interacted: # Allow movement only when player has not interacted with anything
 		if mouse_captured: _handle_joypad_camera_rotation(delta)
 		velocity = _walk(delta) + _gravity(delta) + _jump(delta)
-		
-		# Footstep sound
-		if velocity.is_zero_approx() or !is_on_floor():
-			$steps.stream_paused = true
-		else:
-			$steps.stream_paused = false
 		move_and_slide()
+	
+	# Footstep sound
+	if velocity.is_zero_approx() or !is_on_floor():
+		$steps.stream_paused = true
+	else:
+		$steps.stream_paused = false
 
 func capture_mouse() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -222,6 +222,7 @@ func _handle_interaction():
 	if back_machines_entered:
 		_interaction_logic(BACK_CAM_ROT, BACK_TP_POS, minigame_3_label)
 	if door_entered: # Rest
+		velocity = Vector3(0, 0, 0)
 		player_interacted = true
 		fade.show()
 		animation_player.play("fade_in")
@@ -229,6 +230,7 @@ func _handle_interaction():
 		fatigue_bar.value = 0
 
 func _interaction_logic(cam_rotation, tp_pos, info_label):
+	velocity = Vector3(0, 0, 0)
 	player_interacted = true
 	mouse_captured = false
 	$UI/LowerPanel/Interact.hide()
@@ -431,8 +433,27 @@ func _on_sophie_area_body_exited(body: Node3D) -> void:
 	Dialogic.end_timeline()
 	capture_mouse()
 
-func _on_dialogic_signal(on_quit_signal: String):
-	capture_mouse()
+func _on_dialogic_signal(sig: String):
+	if sig == "on_quit": # Executes when the player exits dialogue
+		capture_mouse()
+	if sig == "evaluation": # Executes when the player ask the personal trainer for evaluation
+		var sum_exercise = int(Globals.treadmill_progress 
+		+ Globals.bike_progress 
+		+ Globals.back_machines_progress
+		+ Globals.mats_progress
+		+ Globals.bench_press_progress
+		+ Globals.dumbells_progress)
+		if sum_exercise == 0: # 0% overall progress
+			Dialogic.VAR.answer = "It seems like you're just getting started! Don't worry, everyone begins somewhere."
+		elif sum_exercise > 0 and sum_exercise <= 20: # up to 33% overall progress
+			Dialogic.VAR.answer = "Great to see you're off the starting block! You are putting in the effort, but there is still a long way to go."
+		elif sum_exercise > 20 and sum_exercise <= 40: # up to 66% overall progress
+			Dialogic.VAR.answer = "You're half way there! The results of your hard work are starting to show."
+		elif sum_exercise > 40 and sum_exercise < 60: # up to 99% overall progress
+			Dialogic.VAR.answer = "Impressive work! You're well on your way to reaching the top."
+		elif sum_exercise == 60: # 100% overall progress
+			Dialogic.VAR.answer = "Incredible! You've achieved peak performance and mastered all the exercises! Your dedication and effort have paid off."
+		
 
 
 func _on_adam_area_body_entered(body: Node3D) -> void:

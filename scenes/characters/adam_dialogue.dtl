@@ -23,9 +23,8 @@ adam_personal_trainer: Hello, how can i help you?
 		adam_personal_trainer: Here you go!
 	- Nevermind.
 - Could you give me an assessment of my physical health?
-	adam_personal_trainer: Sure!
-	adam_personal_trainer: What is your age?
-	adam_personal_trainer: What is your height?
-	adam_personal_trainer: What is your weight?
+	adam_personal_trainer: Sure! Let's See..
+	[signal arg="evaluation"]
+	adam_personal_trainer: {answer}
 - Nevermind.
 [signal arg="on_quit"]

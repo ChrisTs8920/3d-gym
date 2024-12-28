@@ -228,7 +228,7 @@ transform = Transform3D(-0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, 
 [node name="ambient" type="AudioStreamPlayer3D" parent="Gym/Walls/wall/air_conditioner"]
 transform = Transform3D(2.5, 0, 2.84217e-14, 0, 2.5, 0, -2.84217e-14, 0, 2.5, 0, 5, 0)
 stream = ExtResource("10_glhv0")
-volume_db = -5.0
+volume_db = -7.0
 unit_size = 2.0
 max_db = 0.0
 autoplay = true
@@ -242,7 +242,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.676951, -0.7, 0)
 [node name="ambient" type="AudioStreamPlayer3D" parent="Gym/Walls/wall2/air_conditioner"]
 transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 0.541019, 5.01657, -0.25)
 stream = ExtResource("10_glhv0")
-volume_db = -5.0
+volume_db = -7.0
 unit_size = 2.0
 max_db = 0.0
 autoplay = true
