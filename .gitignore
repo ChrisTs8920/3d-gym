@@ -13,6 +13,7 @@ data_*/
 .godot/
 .DS_Store
 
-# Over 100MB
-Terrain001_1K.obj
+# Manuals
+user manual.pdf
+technical manual.pdf
 

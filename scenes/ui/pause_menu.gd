@@ -34,7 +34,7 @@ func _evaluate_obj2():
 	obj2_count.text[0] = str(tmp)
 
 func _highlight_obj(obj_count: Label, obj: Label):
-	# If player completed optional objective, highlight it with yellowe
+	# If player completed optional objective, highlight it with yellow
 	if obj_count.text[0] == obj_count.text[obj_count.text.length() - 1]:
 		obj_count.modulate = Color(1, 1, 0, 1)
 		obj.modulate = Color(1, 1, 0, 1)
@@ -42,7 +42,7 @@ func _highlight_obj(obj_count: Label, obj: Label):
 func _on_resume_button_pressed() -> void:
 	# Unpause
 	get_tree().paused = false
-	hide()
+	hide() # Hide pause menu
 	get_parent().get_node("UI").show()
 	get_parent().capture_mouse()
 

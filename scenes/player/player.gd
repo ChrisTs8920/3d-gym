@@ -223,16 +223,19 @@ func _handle_interaction():
 		_interaction_logic(BACK_CAM_ROT, BACK_TP_POS, minigame_3_label)
 	if door_entered: # Rest
 		velocity = Vector3(0, 0, 0)
-		player_interacted = true
-		fade.show()
+		player_interacted = true # Stop player movement
+		# Plays a little fade in - fade out animation
+		fade.show() 
 		animation_player.play("fade_in")
 		animation_player.queue("fade_out")
+		# Reset fatigue
 		fatigue_bar.value = 0
 
 func _interaction_logic(cam_rotation, tp_pos, info_label):
-	velocity = Vector3(0, 0, 0)
+	velocity = Vector3(0, 0, 0) # Stop player movement
 	player_interacted = true
 	mouse_captured = false
+	# Adjust UI according to exercise
 	$UI/LowerPanel/Interact.hide()
 	$UI/LowerPanel/ExitExercise.show()
 	$UI/UpperPanel/Power.show()
@@ -240,6 +243,7 @@ func _interaction_logic(cam_rotation, tp_pos, info_label):
 	$UI/UpperPanel.size = Vector2(520, 160)
 	if mats_entered or back_machines_entered:
 		$UI/MiddlePanel.show()
+	# Adjust camera position and player position according to exercise
 	camera.rotation_degrees = cam_rotation
 	position = tp_pos
 
@@ -437,7 +441,7 @@ func _on_dialogic_signal(sig: String):
 	if sig == "on_quit": # Executes when the player exits dialogue
 		capture_mouse()
 	if sig == "evaluation": # Executes when the player ask the personal trainer for evaluation
-		var sum_exercise = int(Globals.treadmill_progress 
+		var sum_exercise = int(Globals.treadmill_progress # calc overall sum of player progress
 		+ Globals.bike_progress 
 		+ Globals.back_machines_progress
 		+ Globals.mats_progress

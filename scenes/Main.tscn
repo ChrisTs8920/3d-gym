@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://2r2xorepwlip"]
+[gd_scene load_steps=115 format=3 uid="uid://2r2xorepwlip"]
 
 [ext_resource type="PackedScene" uid="uid://djuoxds0qsiic" path="res://scenes/environment/world_environment.tscn" id="1_6j5mm"]
 [ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://scenes/player/player.tscn" id="1_g2tc4"]
@@ -96,6 +96,7 @@
 [ext_resource type="Texture2D" uid="uid://dantdiv4bx84m" path="res://assets/Textures/icons/keys/ikey.png" id="81_oo3ea"]
 [ext_resource type="PackedScene" uid="uid://b4yywr04obmej" path="res://scenes/characters/sophie_character.tscn" id="82_2exti"]
 [ext_resource type="PackedScene" uid="uid://gro0ioaipn25" path="res://scenes/characters/adam_character.tscn" id="83_ryo7a"]
+[ext_resource type="PackedScene" uid="uid://ya234j5c82fb" path="res://assets/World/Gym/Equipment/FBX/Painting_Small.fbx" id="95_pprbp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ti4c"]
 albedo_color = Color(0.439216, 0.501961, 0.564706, 1)
@@ -289,7 +290,7 @@ visible = false
 [node name="wall4" parent="Gym/Walls" instance=ExtResource("3_ot1kd")]
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0, 3, -14.5)
 
-[node name="Sketchfab_Scene" parent="Gym/Walls/wall4" instance=ExtResource("14_j7a0a")]
+[node name="clock" parent="Gym/Walls/wall4" instance=ExtResource("14_j7a0a")]
 transform = Transform3D(-1.54974e-08, 0.15, 1.03027e-15, -2.38398e-09, -8.88178e-16, -0.15, -0.15, -1.54974e-08, 2.38398e-09, 0.5, 1.3, -0.5)
 
 [node name="ceiling" parent="Gym/Walls" instance=ExtResource("5_vdm7y")]
@@ -1660,8 +1661,12 @@ texture = ExtResource("67_mavv7")
 
 [node name="poster3" type="Sprite3D" parent="Gym"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.6, 3, -13.9966)
+visible = false
 shaded = true
 texture = ExtResource("68_2sca3")
+
+[node name="poster4" parent="Gym" instance=ExtResource("95_pprbp")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.7, 2.9, -14)
 
 [node name="sophie_character" parent="Gym" instance=ExtResource("82_2exti")]
 transform = Transform3D(0.46488, 0, 0.996939, 0, 1.1, 0, -0.996939, 0, 0.46488, -13.5, 0.536279, -11.7)

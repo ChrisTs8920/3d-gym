@@ -10,7 +10,6 @@ var bench_press_progress: float
 
 # Player inventory - Dictionary
 var inventory = {}
-
 var inv_tooltips = []
 
 # All available items - Dictionary

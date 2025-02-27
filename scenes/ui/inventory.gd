@@ -4,9 +4,9 @@ var slot_names: Array[Label] = []
 var slot_sprites: Array[Sprite2D] = []
 var slots: Array[Panel] = []
 
-@onready var power_step: int = Player.POWER_BAR_STEP
-@onready var progress_step: float = Player.PROGRESS_STEP
-@onready var fatigue_bar: ProgressBar = $"..UI/UpperPanel/Fatigue/FatigueProgress"
+# @onready var power_step: int = Player.POWER_BAR_STEP
+# @onready var progress_step: float = Player.PROGRESS_STEP
+# @onready var fatigue_bar: ProgressBar = $"..UI/UpperPanel/Fatigue/FatigueProgress"
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_bought_item)
@@ -16,11 +16,13 @@ func _ready() -> void:
 		slots.append(get_node("blur_effect/GridContainer/slot%s/Panel" % i))
 
 func _input(event: InputEvent) -> void:
+	# A method that was supposed to handle item consumption with double click
 	if event is InputEventMouseButton and event.is_double_click():
-		print("double clicked!")
+		pass
 
 func _on_bought_item(bought_item_signal: String):
 	# Update Inventory array, if player bought an item
+	# Dialogic is the addon that handles conversation with NPCs
 	if bought_item_signal == "bought_item":
 		if Dialogic.VAR.item_selected != "":
 			Globals.inventory[Dialogic.VAR.item_selected] = Globals.ALL_ITEMS[Dialogic.VAR.item_selected]
