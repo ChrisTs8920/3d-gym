@@ -13,7 +13,7 @@ config_version=5
 config/name="Gym"
 config/tags=PackedStringArray("3d", "game")
 run/main_scene="res://scenes/Main.tscn"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.4")
 config/icon="res://icon.svg"
 
 [autoload]

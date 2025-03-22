@@ -83,7 +83,7 @@
 [ext_resource type="FontFile" uid="uid://xllmi46s1prp" path="res://assets/Fonts/Itim-Regular.ttf" id="62_nddp4"]
 [ext_resource type="Texture2D" uid="uid://bsimqncoiru7p" path="res://assets/Textures/icons/keys/wasd.png" id="63_87bjg"]
 [ext_resource type="PackedScene" uid="uid://bfkb7gfgdjbic" path="res://assets/World/Gym/coffee_shop_cup/scene.gltf" id="63_jxtsh"]
-[ext_resource type="Script" path="res://scenes/environment/exercises_board.gd" id="64_6ynpg"]
+[ext_resource type="Script" uid="uid://dwvqb56dx3kx1" path="res://scenes/environment/exercises_board.gd" id="64_6ynpg"]
 [ext_resource type="PackedScene" uid="uid://blurcfhyw6x1n" path="res://assets/World/Gym/coffee_crisp/scene.gltf" id="64_077ak"]
 [ext_resource type="Texture2D" uid="uid://cs7jd1u364irf" path="res://assets/Textures/icons/keys/ekey.png" id="64_ciqqb"]
 [ext_resource type="PackedScene" uid="uid://b1asnwv8wya31" path="res://assets/World/Gym/indoor_plant/scene.gltf" id="66_4dnwn"]

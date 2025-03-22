@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bva3dr0v1sdaq"
-path.s3tc="res://.godot/imported/palette1.png-ae8b850072d50cf474ee14becdbe224b.s3tc.ctex"
+uid="uid://b8ruhlqy4an02"
+path.s3tc="res://.godot/imported/palette1.png-137f59a4a31de5d39ba439599c8a6802.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/World/Gym/Equipment/Textures/palette1.png"
-dest_files=["res://.godot/imported/palette1.png-ae8b850072d50cf474ee14becdbe224b.s3tc.ctex"]
+source_file="res://assets/World/Gym/Equipment/textures/palette1.png"
+dest_files=["res://.godot/imported/palette1.png-137f59a4a31de5d39ba439599c8a6802.s3tc.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://dgd4molj82ven"]
 
 [ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_7hlye"]
-[ext_resource type="Shader" path="res://scenes/ui/blur_pause.gdshader" id="1_aah7c"]
+[ext_resource type="Shader" uid="uid://btld53k8wnrmk" path="res://scenes/ui/blur_pause.gdshader" id="1_aah7c"]
 [ext_resource type="Texture2D" uid="uid://cm0jt7jdcx1wj" path="res://icon.svg" id="2_4mbto"]
-[ext_resource type="Script" path="res://scenes/ui/inventory.gd" id="2_iekem"]
+[ext_resource type="Script" uid="uid://2aiwea067bnk" path="res://scenes/ui/inventory.gd" id="2_iekem"]
 
 [sub_resource type="Theme" id="Theme_sicys"]
 default_font = ExtResource("1_7hlye")

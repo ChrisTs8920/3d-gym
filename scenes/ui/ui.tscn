@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://dncrcyoh3dyx0"]
 
-[ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_7jkxl"]
+[ext_resource type="Script" uid="uid://c1eh254wvoj3r" path="res://scenes/ui/ui.gd" id="1_7jkxl"]
 [ext_resource type="FontFile" uid="uid://8mhvum0ri523" path="res://assets/Fonts/Roboto-Medium.ttf" id="1_ur6vg"]
 [ext_resource type="Texture2D" uid="uid://nnkh1togsycx" path="res://assets/Textures/icons/keys/ekey_2.png" id="2_ist8l"]
 [ext_resource type="Texture2D" uid="uid://b5bcqxnu3w722" path="res://assets/Textures/icons/keys/esckey.png" id="3_g6ygg"]
@@ -102,9 +102,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1cqqf"]
 _data = {
-"RESET": SubResource("Animation_8j4yp"),
-"fade_in": SubResource("Animation_sx22n"),
-"fade_out": SubResource("Animation_eno2h")
+&"RESET": SubResource("Animation_8j4yp"),
+&"fade_in": SubResource("Animation_sx22n"),
+&"fade_out": SubResource("Animation_eno2h")
 }
 
 [node name="UI" type="Control"]

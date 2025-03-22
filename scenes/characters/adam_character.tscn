@@ -755,8 +755,8 @@ tracks/52/keys = PackedFloat32Array(0, 1, 0.143132, -0.000307297, 0.0161302, 0.9
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_esfm8"]
 _data = {
-"Take 001": SubResource("Animation_yutyr"),
-"mixamo_com": SubResource("Animation_nujos")
+&"Take 001": SubResource("Animation_yutyr"),
+&"mixamo_com": SubResource("Animation_nujos")
 }
 
 [node name="adam_character" instance=ExtResource("1_u7wyl")]
